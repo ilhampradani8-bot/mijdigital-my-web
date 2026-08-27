@@ -37,7 +37,7 @@ include 'header.php';
     <div class="max-w-7xl mx-auto px-6 relative z-10">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             
-            <div class="group bg-white rounded-[2.5rem] p-10 border border-gray-100 hover:border-orange-500 transition-all duration-500 relative overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-3" data-aos="fade-up" data-aos-delay="100">
+            <div id="personal-branding" class="group bg-white rounded-[2.5rem] p-10 border border-gray-100 hover:border-orange-500 transition-all duration-500 relative overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-3" data-aos="fade-up" data-aos-delay="100">
                 <div class="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-orange-50 opacity-0 group-hover:opacity-100 transition duration-500"></div>
                 <div class="relative z-10 flex flex-col h-full items-center text-center">
                     <div class="w-32 h-32 mb-8 relative">
@@ -57,7 +57,7 @@ include 'header.php';
                 </div>
             </div>
 
-            <div class="group bg-white rounded-[2.5rem] p-10 border border-gray-100 hover:border-black transition-all duration-500 relative overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-3" data-aos="fade-up" data-aos-delay="200">
+            <div id="corporate-branding" class="group bg-white rounded-[2.5rem] p-10 border border-gray-100 hover:border-black transition-all duration-500 relative overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-3" data-aos="fade-up" data-aos-delay="200">
                 <div class="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-gray-50 opacity-0 group-hover:opacity-100 transition duration-500"></div>
                 <div class="relative z-10 flex flex-col h-full items-center text-center">
                     <div class="w-32 h-32 mb-8 relative">
@@ -77,7 +77,7 @@ include 'header.php';
                 </div>
             </div>
 
-            <div class="group bg-white rounded-[2.5rem] p-10 border border-gray-100 hover:border-blue-600 transition-all duration-500 relative overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-3" data-aos="fade-up" data-aos-delay="300">
+            <div id="business-system" class="group bg-white rounded-[2.5rem] p-10 border border-gray-100 hover:border-blue-600 transition-all duration-500 relative overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-3" data-aos="fade-up" data-aos-delay="300">
                 <div class="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-blue-50 opacity-0 group-hover:opacity-100 transition duration-500"></div>
                 <div class="relative z-10 flex flex-col h-full items-center text-center">
                     <div class="w-32 h-32 mb-8 relative">

@@ -31,6 +31,11 @@
   color: #9ca3af;
   font-size: 14px;
 }
+.footer-content-wrap {
+  background: #1c1c21;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 45px;
+}
 .footer-content {
   position: relative;
   z-index: 2;
@@ -62,7 +67,7 @@
   height: 40px;
   border-radius: 50%;
   margin-right: 10px;
-  background: #1a1a1e;
+  background: #282830;
   transition: all 0.3s ease;
 }
 .footer-social-icon a:hover {
@@ -120,7 +125,7 @@
 .subscribe-form input {
   width: 100%;
   padding: 14px 60px 14px 20px;
-  background: #18181c;
+  background: #282830;
   border: none;
   color: #fff;
   font-size: 14px;
@@ -145,14 +150,14 @@
   font-size: 16px;
 }
 .copyright-area {
-  background: #08080a;
+  background: #141418;
   padding: 20px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 .copyright-text p {
   margin: 0;
   font-size: 13px;
-  color: #6b7280;
+  color: #9ca3af;
 }
 .copyright-text p a {
   color: #ea580c;
@@ -164,7 +169,7 @@
 }
 .footer-menu li a {
   font-size: 13px;
-  color: #6b7280;
+  color: #9ca3af;
   transition: color 0.3s ease;
 }
 .footer-menu li a:hover {
@@ -176,7 +181,7 @@
     <div class="max-w-7xl mx-auto px-6">
         
         <!-- Top CTA Bar (Find Us, Call Us, Mail Us) -->
-        <div class="footer-cta pb-8 mb-12">
+        <div class="footer-cta pb-8 mb-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="single-cta">
                     <i class="fas fa-map-marker-alt"></i>
@@ -196,100 +201,104 @@
                     <i class="far fa-envelope-open"></i>
                     <div class="cta-text">
                         <h4 x-text="text?.cta_mail_title?.[lang] || 'Mail Us'">Mail Us</h4>
-                        <span>admin@mijdigital.my</span>
+                        <span>info@mijdigital.my</span>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <!-- Main Footer Content -->
-        <div class="footer-content pb-12">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
-                
-                <!-- Widget 1: Logo & Social -->
-                <div class="lg:col-span-4">
-                    <div class="footer-widget">
-                        <div class="footer-logo flex items-center mb-6">
-                            <a href="index" class="inline-block">
-                                <img src="mij-logo.png" class="h-16 md:h-20 w-auto object-contain transition-transform duration-200 hover:scale-105" alt="MIJ Digital Logo">
-                            </a>
-                        </div>
-                        <div class="footer-text">
-                            <p x-text="text?.ft_desc?.[lang] || 'Penyedia perkhidmatan pembangunan laman web premium, jenama peribadi, sistem enterprise & automasi Web3.'">
-                                Penyedia perkhidmatan pembangunan laman web premium, jenama peribadi, sistem enterprise & automasi Web3.
-                            </p>
-                        </div>
-                        <div class="footer-social-icon">
-                            <span x-text="text?.ft_follow?.[lang] || 'Follow Us'">Follow Us</span>
-                            <a href="https://www.instagram.com/ikhwanjamal90?igsh=ejdmb2NvMjh2b2V1" target="_blank" class="instagram-bg" title="Instagram"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.threads.com/@ikhwanjamal90?invite=0" target="_blank" class="threads-bg" title="Threads"><i class="fa-solid fa-at"></i></a>
-                            <a href="https://www.strava.com/athletes/186812023" target="_blank" class="strava-bg" title="Strava"><i class="fab fa-strava"></i></a>
-                            <a href="https://tradingsafe.mijdigital.my" target="_blank" class="web3-bg" title="TradingSafe Web3 Project"><i class="fas fa-chart-line"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Widget 2: Useful Links Grid -->
-                <div class="lg:col-span-4">
-                    <div class="footer-widget">
-                        <div class="footer-widget-heading">
-                            <h3 x-text="text?.ft_useful_links?.[lang] || 'Useful Links'">Useful Links</h3>
-                        </div>
-                        <ul>
-                            <li><a href="index" x-text="text?.nav_home?.[lang] || 'Home'">Home</a></li>
-                            <li><a href="index#about-me" x-text="text?.nav_about?.[lang] || 'About Us'">About Us</a></li>
-                            <li><a href="services" x-text="text?.nav_services?.[lang] || 'Services'">Services</a></li>
-                            <li><a href="portfolio" x-text="text?.nav_portfolio?.[lang] || 'Portfolio'">Portfolio</a></li>
-                            <li><a href="faq" x-text="text?.nav_faq?.[lang] || 'FAQ'">FAQ</a></li>
-                            <li><a href="https://tradingsafe.mijdigital.my" target="_blank" class="text-orange-400 font-bold">TradingSafe</a></li>
-                            <li><a href="privacy" x-text="text?.ft_privacy?.[lang] || 'Privacy'">Privacy</a></li>
-                            <li><a href="terms" x-text="text?.ft_terms?.[lang] || 'Terms'">Terms</a></li>
-                            <li><a href="cookies" x-text="text?.ft_cookies?.[lang] || 'Cookies'">Cookies</a></li>
-                            <li><a href="https://wa.me/601155886905" target="_blank" x-text="text?.nav_chat?.[lang] || 'Contact'">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Widget 3: Subscribe Form -->
-                <div class="lg:col-span-4">
-                    <div class="footer-widget">
-                        <div class="footer-widget-heading">
-                            <h3 x-text="text?.ft_subscribe_head?.[lang] || 'Subscribe'">Subscribe</h3>
-                        </div>
-                        <div class="footer-text mb-6">
-                            <p x-text="text?.ft_subscribe_sub?.[lang] || 'Jangan terlepas info tawaran dan kemaskini projek terbaru kami, sila masukkan e-mel anda.'">
-                                Jangan terlepas info tawaran dan kemaskini projek terbaru kami, sila masukkan e-mel anda.
-                            </p>
-                        </div>
-                        <div class="subscribe-form">
-                            <form action="https://wa.me/601155886905" method="get" target="_blank">
-                                <input type="email" placeholder="Email Address" required>
-                                <button type="submit" aria-label="Subscribe"><i class="fab fa-telegram-plane"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
 
     </div>
 
-    <!-- Copyright Bar -->
-    <div class="copyright-area">
+    <!-- Main Footer Content Below Line (Sleek Gray Background) -->
+    <div class="footer-content-wrap">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-                <div class="copyright-text text-center md:text-left">
-                    <p>Copyright &copy; 2026, All Rights Reserved <a href="index">MIJ Digital ENT.</a></p>
+            <div class="footer-content pb-12">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                    
+                    <!-- Widget 1: Logo & Social -->
+                    <div class="lg:col-span-4">
+                        <div class="footer-widget">
+                            <div class="footer-logo flex items-center mb-6">
+                                <a href="index" class="inline-block">
+                                    <img src="mij-logo.png" class="h-16 md:h-20 w-auto object-contain transition-transform duration-200 hover:scale-105" alt="MIJ Digital Logo">
+                                </a>
+                            </div>
+                            <div class="footer-text">
+                                <p x-text="text?.ft_desc?.[lang] || 'Penyedia perkhidmatan pembangunan laman web premium, jenama peribadi, sistem enterprise & automasi Web3.'">
+                                    Penyedia perkhidmatan pembangunan laman web premium, jenama peribadi, sistem enterprise & automasi Web3.
+                                </p>
+                            </div>
+                            <div class="footer-social-icon">
+                                <span x-text="text?.ft_follow?.[lang] || 'Follow Us'">Follow Us</span>
+                                <a href="https://www.instagram.com/ikhwanjamal90?igsh=ejdmb2NvMjh2b2V1" target="_blank" class="instagram-bg" title="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.threads.com/@ikhwanjamal90?invite=0" target="_blank" class="threads-bg" title="Threads"><i class="fa-solid fa-at"></i></a>
+                                <a href="https://www.strava.com/athletes/186812023" target="_blank" class="strava-bg" title="Strava"><i class="fab fa-strava"></i></a>
+                                <a href="https://tradingsafe.mijdigital.my" target="_blank" class="web3-bg" title="TradingSafe Web3 Project"><i class="fas fa-chart-line"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Widget 2: Useful Links Grid -->
+                    <div class="lg:col-span-4">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3 x-text="text?.ft_useful_links?.[lang] || 'Useful Links'">Useful Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="index" x-text="text?.nav_home?.[lang] || 'Home'">Home</a></li>
+                                <li><a href="index#about-me" x-text="text?.nav_about?.[lang] || 'About Us'">About Us</a></li>
+                                <li><a href="services" x-text="text?.nav_services?.[lang] || 'Services'">Services</a></li>
+                                <li><a href="portfolio" x-text="text?.nav_portfolio?.[lang] || 'Portfolio'">Portfolio</a></li>
+                                <li><a href="faq" x-text="text?.nav_faq?.[lang] || 'FAQ'">FAQ</a></li>
+                                <li><a href="https://tradingsafe.mijdigital.my" target="_blank" class="text-orange-400 font-bold">TradingSafe</a></li>
+                                <li><a href="privacy" x-text="text?.ft_privacy?.[lang] || 'Privacy'">Privacy</a></li>
+                                <li><a href="terms" x-text="text?.ft_terms?.[lang] || 'Terms'">Terms</a></li>
+                                <li><a href="cookies" x-text="text?.ft_cookies?.[lang] || 'Cookies'">Cookies</a></li>
+                                <li><a href="https://wa.me/601155886905" target="_blank" x-text="text?.nav_chat?.[lang] || 'Contact'">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Widget 3: Subscribe Form -->
+                    <div class="lg:col-span-4">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3 x-text="text?.ft_subscribe_head?.[lang] || 'Subscribe'">Subscribe</h3>
+                            </div>
+                            <div class="footer-text mb-6">
+                                <p x-text="text?.ft_subscribe_sub?.[lang] || 'Jangan terlepas info tawaran dan kemaskini projek terbaru kami, sila masukkan e-mel anda.'">
+                                    Jangan terlepas info tawaran dan kemaskini projek terbaru kami, sila masukkan e-mel anda.
+                                </p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="https://wa.me/601155886905" method="get" target="_blank">
+                                    <input type="email" placeholder="Email Address" required>
+                                    <button type="submit" aria-label="Subscribe"><i class="fab fa-telegram-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="footer-menu flex items-center gap-4">
-                    <ul>
-                        <li><a href="index" x-text="text?.nav_home?.[lang] || 'Home'">Home</a></li>
-                        <li><a href="terms" x-text="text?.ft_terms?.[lang] || 'Terms'">Terms</a></li>
-                        <li><a href="privacy" x-text="text?.ft_privacy?.[lang] || 'Privacy'">Privacy</a></li>
-                        <li><a href="cookies" x-text="text?.ft_cookies?.[lang] || 'Cookies'">Cookies</a></li>
-                    </ul>
-                    <a href="#" @click.prevent="window.scrollTo({top: 0, behavior: 'smooth'})" class="text-xs font-bold text-orange-500 hover:text-orange-400 transition ml-4 uppercase tracking-wider">Back to Top ↑</a>
+            </div>
+        </div>
+
+        <!-- Copyright Bar -->
+        <div class="copyright-area">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <div class="copyright-text text-center md:text-left">
+                        <p>Copyright &copy; 2026, All Rights Reserved <a href="index">MIJ Digital ENT.</a></p>
+                    </div>
+                    <div class="footer-menu flex items-center gap-4">
+                        <ul>
+                            <li><a href="index" x-text="text?.nav_home?.[lang] || 'Home'">Home</a></li>
+                            <li><a href="terms" x-text="text?.ft_terms?.[lang] || 'Terms'">Terms</a></li>
+                            <li><a href="privacy" x-text="text?.ft_privacy?.[lang] || 'Privacy'">Privacy</a></li>
+                            <li><a href="cookies" x-text="text?.ft_cookies?.[lang] || 'Cookies'">Cookies</a></li>
+                        </ul>
+                        <a href="#" @click.prevent="window.scrollTo({top: 0, behavior: 'smooth'})" class="text-xs font-bold text-orange-500 hover:text-orange-400 transition ml-4 uppercase tracking-wider">Back to Top ↑</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -344,8 +353,8 @@ $data_json_str = file_exists(__DIR__ . '/data.json') ? file_get_contents(__DIR__
             lang: 'ENG',
             text: Object.assign({
                 promo_text: { ENG: '', BM: '' },
-                p1_new: { ENG: '1500', BM: '1500' },
-                p2_new: { ENG: '3500', BM: '3500' },
+                p1_new: { ENG: '999', BM: '999' },
+                p2_new: { ENG: '4999', BM: '4999' },
                 nav_home: { ENG: 'Home', BM: 'Utama' },
                 nav_about: { ENG: 'About Me', BM: 'Tentang Saya' },
                 nav_services: { ENG: 'Services', BM: 'Perkhidmatan' },
@@ -370,4 +379,4 @@ $data_json_str = file_exists(__DIR__ . '/data.json') ? file_get_contents(__DIR__
     });
 </script>
 </body>
-</html>l>
+</html>

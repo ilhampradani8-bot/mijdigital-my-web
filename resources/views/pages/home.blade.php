@@ -85,56 +85,122 @@
 </section>
 
 <!-- Testimonials Section -->
-<section id="testimonials" class="py-24 bg-[#0a0a0c] text-white relative">
+<section id="testimonials" class="py-16 md:py-20 bg-[#09090b] text-white relative overflow-hidden border-t border-gray-900">
     <div class="max-w-7xl mx-auto px-6 relative z-10">
-        <div class="mb-16 text-center" data-aos="fade-up">
-            <span class="text-orange-500 font-bold tracking-[0.3em] text-xs uppercase mb-3 block" x-text="text.testi_badge ? text.testi_badge[lang] : 'TESTIMONIALS'"></span>
-            <h2 class="font-modernica text-4xl md:text-6xl font-black text-white uppercase tracking-tight" x-text="text.testi_head ? text.testi_head[lang] : 'What they say about us.'"></h2>
+        <div class="mb-6 text-left" data-aos="fade-up">
+            <div class="flex items-center gap-2.5 mb-2">
+                <span class="w-6 h-[2px] bg-orange-500 inline-block"></span>
+                <span class="text-orange-500 font-bold tracking-[0.25em] text-xs uppercase" x-text="text.testi_badge ? text.testi_badge[lang] : 'TESTIMONIALS'"></span>
+            </div>
+            <h2 class="font-modernica text-3xl sm:text-4xl md:text-5xl font-black text-white uppercase tracking-tight leading-tight max-w-3xl" x-text="text.testi_head ? text.testi_head[lang] : 'What they say about us.'"></h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-[#121215] border border-gray-800 p-8 rounded-2xl hover:border-orange-500/50 transition duration-300">
-                <div class="flex items-center gap-1 text-amber-400 mb-4">
-                    <span class="text-sm font-bold">★★★★★</span>
-                    <span class="text-xs text-gray-400 ml-2">5.0</span>
-                </div>
-                <p class="text-gray-300 text-sm italic mb-6">"The response was incredibly fast! The website creation was lightning speed and I felt very safe handing over my data."</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-orange-600 text-white font-bold flex items-center justify-center">NR</div>
-                    <div>
-                        <h4 class="font-bold text-sm text-white">Naqiuddin Razak</h4>
-                        <p class="text-xs text-gray-500">Financial Adviser</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-[#121215] border border-gray-800/80 p-6 rounded-2xl flex flex-col relative hover:border-orange-500/50 hover:shadow-xl hover:shadow-orange-500/10 transition-all duration-300 group">
+                <div class="flex items-center justify-between mb-3 pb-3 border-b border-gray-800/60">
+                    <div class="flex items-center gap-1.5">
+                        <div class="flex text-amber-400 text-xs tracking-tighter">
+                            ★★★★★
+                        </div>
+                        <span class="text-xs font-bold text-gray-300 ml-1">5.0</span>
                     </div>
+                    <div class="flex items-center gap-1.5 text-xs text-gray-400">
+                        <span>Google Review</span>
+                        <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24">
+                            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <p class="text-gray-300 text-sm leading-relaxed mb-5 italic flex-grow">"The response was incredibly fast! The website creation was lightning speed and I felt very safe handing over my data."</p>
+
+                <div class="mt-auto pt-3 border-t border-gray-800/80 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-full bg-orange-600/90 text-white font-bold text-xs flex items-center justify-center">NR</div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm tracking-wide">Naqiuddin Razak</h4>
+                            <p class="text-xs text-orange-500 font-semibold tracking-wide">Financial Adviser</p>
+                        </div>
+                    </div>
+                    <span class="inline-flex items-center gap-1 text-[10px] text-emerald-400 bg-emerald-950/50 border border-emerald-800/40 px-2 py-0.5 rounded-full font-medium">
+                        <svg class="w-2.5 h-2.5 fill-current" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+                        Verified
+                    </span>
                 </div>
             </div>
 
-            <div class="bg-[#121215] border border-gray-800 p-8 rounded-2xl hover:border-orange-500/50 transition duration-300">
-                <div class="flex items-center gap-1 text-amber-400 mb-4">
-                    <span class="text-sm font-bold">★★★★★</span>
-                    <span class="text-xs text-gray-400 ml-2">5.0</span>
-                </div>
-                <p class="text-gray-300 text-sm italic mb-6">"Sangat profesional dan faham apa yang syarikat perlukan. Rekabentuk yang diberikan jauh melampaui jangkaan kami!"</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-orange-600 text-white font-bold flex items-center justify-center">AB</div>
-                    <div>
-                        <h4 class="font-bold text-sm text-white">Abmalaya Management</h4>
-                        <p class="text-xs text-gray-500">Corporate Client</p>
+            <div class="bg-[#121215] border border-gray-800/80 p-6 rounded-2xl flex flex-col relative hover:border-orange-500/50 hover:shadow-xl hover:shadow-orange-500/10 transition-all duration-300 group">
+                <div class="flex items-center justify-between mb-3 pb-3 border-b border-gray-800/60">
+                    <div class="flex items-center gap-1.5">
+                        <div class="flex text-amber-400 text-xs tracking-tighter">
+                            ★★★★★
+                        </div>
+                        <span class="text-xs font-bold text-gray-300 ml-1">5.0</span>
                     </div>
+                    <div class="flex items-center gap-1.5 text-xs text-gray-400">
+                        <span>Google Review</span>
+                        <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24">
+                            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <p class="text-gray-300 text-sm leading-relaxed mb-5 italic flex-grow">"Sangat profesional dan faham apa yang syarikat perlukan. Rekabentuk yang diberikan jauh melampaui jangkaan kami!"</p>
+
+                <div class="mt-auto pt-3 border-t border-gray-800/80 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-full bg-orange-600/90 text-white font-bold text-xs flex items-center justify-center">AB</div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm tracking-wide">Abmalaya Management</h4>
+                            <p class="text-xs text-orange-500 font-semibold tracking-wide">Corporate Client</p>
+                        </div>
+                    </div>
+                    <span class="inline-flex items-center gap-1 text-[10px] text-emerald-400 bg-emerald-950/50 border border-emerald-800/40 px-2 py-0.5 rounded-full font-medium">
+                        <svg class="w-2.5 h-2.5 fill-current" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+                        Verified
+                    </span>
                 </div>
             </div>
 
-            <div class="bg-[#121215] border border-gray-800 p-8 rounded-2xl hover:border-orange-500/50 transition duration-300">
-                <div class="flex items-center gap-1 text-amber-400 mb-4">
-                    <span class="text-sm font-bold">★★★★★</span>
-                    <span class="text-xs text-gray-400 ml-2">5.0</span>
-                </div>
-                <p class="text-gray-300 text-sm italic mb-6">"Web3 and dApp integration were executed flawlessly. Highly recommended for custom business systems."</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-orange-600 text-white font-bold flex items-center justify-center">IP</div>
-                    <div>
-                        <h4 class="font-bold text-sm text-white">Ilham Pradani</h4>
-                        <p class="text-xs text-gray-500">Portfolio Dev</p>
+            <div class="bg-[#121215] border border-gray-800/80 p-6 rounded-2xl flex flex-col relative hover:border-orange-500/50 hover:shadow-xl hover:shadow-orange-500/10 transition-all duration-300 group">
+                <div class="flex items-center justify-between mb-3 pb-3 border-b border-gray-800/60">
+                    <div class="flex items-center gap-1.5">
+                        <div class="flex text-amber-400 text-xs tracking-tighter">
+                            ★★★★★
+                        </div>
+                        <span class="text-xs font-bold text-gray-300 ml-1">5.0</span>
                     </div>
+                    <div class="flex items-center gap-1.5 text-xs text-gray-400">
+                        <span>Google Review</span>
+                        <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24">
+                            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <p class="text-gray-300 text-sm leading-relaxed mb-5 italic flex-grow">"Web3 and dApp integration were executed flawlessly. Highly recommended for custom business systems."</p>
+
+                <div class="mt-auto pt-3 border-t border-gray-800/80 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-full bg-orange-600/90 text-white font-bold text-xs flex items-center justify-center">IP</div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm tracking-wide">Ilham Pradani</h4>
+                            <p class="text-xs text-orange-500 font-semibold tracking-wide">Portfolio Dev</p>
+                        </div>
+                    </div>
+                    <span class="inline-flex items-center gap-1 text-[10px] text-emerald-400 bg-emerald-950/50 border border-emerald-800/40 px-2 py-0.5 rounded-full font-medium">
+                        <svg class="w-2.5 h-2.5 fill-current" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+                        Verified
+                    </span>
                 </div>
             </div>
         </div>

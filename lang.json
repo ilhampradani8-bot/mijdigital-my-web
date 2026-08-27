@@ -32,7 +32,7 @@
     "work_3_title": { "ENG": "Business System", "BM": "Business System" }, 
     "work_3_desc": { "ENG": "Management System for Rentals, Clinics, Agencies.", "BM": "Sistem Pengurusan untuk Sewaan, Klinik, Agensi." },
     
-    "price_badge": { "ENG": "PRICING PACKAGES", "BM": "PAKEJ HARGA" }, 
+    "price_badge": { "ENG": "Price List", "BM": "Price List" }, 
     "price_head_1": { "ENG": "YOUR WEBSITE", "BM": "LAMAN WEB ANDA" }, 
     "price_head_2": { "ENG": "STARTS HERE.", "BM": "BERMULA DI SINI." },
     "price_sub": { "ENG": "Transparent & Flexible Plans Built for Growth.", "BM": "Pelan Telus & Fleksibel Rekabentuk Khas Untuk Pertumbuhan." }, 
@@ -43,8 +43,8 @@
     "price_limit": { "ENG": "Flexible Packages", "BM": "Pakej Fleksibel" },
     "price_lms_desc": { "ENG": "Management System for Rentals, Clinics, Agencies, etc.", "BM": "Sistem Pengurusan Sewaan, Klinik, Agensi, dll." },
     
-    "p1_old": { "ENG": "RM 1000", "BM": "RM 1000" }, "p1_new": { "ENG": "RM 700", "BM": "RM 700" },
-    "p2_old": { "ENG": "RM 1,500", "BM": "RM 1,500" }, "p2_new": { "ENG": "RM 1,000", "BM": "RM 1,000" },
+    "p1_old": { "ENG": "RM 1,500", "BM": "RM 1,500" }, "p1_new": { "ENG": "RM 999", "BM": "RM 999" },
+    "p2_old": { "ENG": "RM 6,500", "BM": "RM 6,500" }, "p2_new": { "ENG": "RM 4,999", "BM": "RM 4,999" },
     "p1_name": { "ENG": "Personal Branding", "BM": "Personal Branding" }, "p1_desc": { "ENG": "Perfect for Agents & Experts", "BM": "Sesuai untuk Ejen & Pakar" },
     "p2_name": { "ENG": "Corporate Branding", "BM": "Corporate Branding" }, "p2_desc": { "ENG": "For SME & Companies", "BM": "Untuk PKS & Syarikat" },
 
@@ -91,6 +91,12 @@
     
     "q5": { "ENG": "What Tech Stack do you use?", "BM": "Guna teknologi apa?" }, 
     "a5": { "ENG": "We avoid using WordPress templates. Instead, we build from scratch using a \"Mixed-Mode\" approach—combining modern frameworks with AI-assisted coding to ensure high performance and precision.", "BM": "Kami elakkan template WordPress. Kami bina dari kosong menggunakan pendekatan \"Mixed-Mode\"—menggabungkan framework moden dengan bantuan AI untuk prestasi tinggi dan ketepatan." },
+    
+    "q6": { "ENG": "Do I get domain & hosting included?", "BM": "Adakah domain & hosting termasuk?" }, 
+    "a6": { "ENG": "Yes! All Personal and Corporate packages include 1 Year Free Domain (.com/.my) & High-Speed Cloud Hosting.", "BM": "Ya! Semua pakej Personal dan Korporat termasuk 1 Tahun Percuma Domain (.com/.my) & Cloud Hosting Berkelajuan Tinggi." },
+    
+    "q7": { "ENG": "Can I request custom features?", "BM": "Bolehkan saya minta fungsi khas?" }, 
+    "a7": { "ENG": "Absolutely! For custom business systems, payment gateways, booking tools, or Web3 integration, select our Business System plan for a tailored solution.", "BM": "Sudah tentu! Untuk sistem perniagaan khas, gerbang pembayaran, alat tempahan, atau integrasi Web3, pilih pelan Business System untuk solusi khusus." },
 
     "btn_strava": { "ENG": "Check My Strava", "BM": "Lihat Strava Saya" },
 
