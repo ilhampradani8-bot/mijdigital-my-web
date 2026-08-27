@@ -575,6 +575,39 @@
             .pricing-card-scroll-wrap .jh-pricing-card:hover {
                 transform: rotateY(0deg) scale(1.02);
             }
+        /* Metallic Neumorphism Button (.btn-metal-neo) */
+        .btn-metal-neo {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px 36px;
+            border-radius: 9999px;
+            background: linear-gradient(145deg, #2c323f, #181c24);
+            border: 1.5px solid rgba(255, 255, 255, 0.18);
+            color: #ffffff !important;
+            font-weight: 800;
+            font-size: 15px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.6), -4px -4px 12px rgba(255, 255, 255, 0.05), inset 0 1px 2px rgba(255, 255, 255, 0.3);
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            text-decoration: none !important;
+        }
+
+        .btn-metal-neo:hover {
+            background: linear-gradient(145deg, #ea580c, #c2410c);
+            border-color: rgba(255, 255, 255, 0.35);
+            color: #ffffff !important;
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 28px rgba(234, 88, 12, 0.45), inset 0 1px 3px rgba(255, 255, 255, 0.4);
+        }
+
+        .btn-metal-neo:active {
+            transform: translateY(1px) scale(0.98);
+            box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.5), inset -2px -2px 6px rgba(255, 255, 255, 0.1);
         }
 
         /* Cat Loader Page Overlay (Prevents Unstyled Flash) */
