@@ -1,0 +1,82 @@
+{
+    "promo_text_eng": "",
+    "promo_text_bm": "",
+    "price_personal": "1500",
+    "price_corporate": "3500",
+    "portfolio_items": [
+        {
+            "name": "on-chain, Staking dApp, Dex, Contract Deploy",
+            "role": "Web3",
+            "link": "https:\/\/web3.ilhampradani.me",
+            "images": [
+                "uploads\/porto_1787654696_881.png"
+            ]
+        },
+        {
+            "name": "tradingsafe",
+            "role": "trading automation",
+            "link": "https:\/\/tradingsafe.mijdigital.my",
+            "images": [
+                "uploads\/porto_1787651473_647.png"
+            ]
+        },
+        {
+            "name": "Abmalaya",
+            "role": "Company Web",
+            "link": "https:\/\/www.abmalaya.com",
+            "images": [
+                "uploads\/porto_1782368386_837.png"
+            ]
+        },
+        {
+            "name": "Ilham Pradani",
+            "role": "Website Portofolio Dev",
+            "link": "https:\/\/www.ilhampradani.me",
+            "images": [
+                "uploads\/porto_1787651363_693.png"
+            ]
+        },
+        {
+            "name": "GRAFISA WEB E-COMERCCE",
+            "role": "E-COMERCE",
+            "link": "https:\/\/grafisa.id",
+            "images": [
+                "uploads\/porto_1777120941_861.png"
+            ]
+        },
+        {
+            "name": "Naquidin Razaq",
+            "role": "Islamic Financial Adviser",
+            "link": "https:\/\/naqiuddinrazak.com",
+            "images": [
+                "uploads\/porto_1771924755_506.png"
+            ]
+        },
+        {
+            "name": "Bazil Syahir",
+            "role": "Financial Advisor",
+            "link": "https:\/\/bazilsyahir.com\/",
+            "images": [
+                "uploads\/porto_1771855745_982.png"
+            ]
+        },
+        {
+            "name": "Hafiz Mazhanafi",
+            "role": "Trusted Car Dealer",
+            "link": "https:\/\/hafizautogear.com\/",
+            "images": [
+                "uploads\/porto_1771855781_973.png"
+            ]
+        },
+        {
+            "name": "E-commerce",
+            "role": "Product Digital Fully",
+            "link": "https:\/\/easymall.mijdigital.my",
+            "images": [
+                "uploads\/porto_1787651092_876.png"
+            ]
+        }
+    ],
+    "price_personal_old": "RM 2000",
+    "price_corporate_old": "RM 5000"
+}

@@ -1,0 +1,99 @@
+{
+    "promo_text": { 
+        "ENG": "", 
+        "BM": "" 
+    },
+    
+    "nav_home": { "ENG": "Home", "BM": "Utama" }, 
+    "nav_about": { "ENG": "About Me", "BM": "Tentang Saya" }, 
+    "nav_services": { "ENG": "Services", "BM": "Servis" }, 
+    "nav_testi": { "ENG": "Testimonials", "BM": "Testimoni" }, 
+    "nav_portfolio": { "ENG": "Portfolio", "BM": "Portfolio" }, 
+    "nav_faq": { "ENG": "FAQ", "BM": "Soalan Lazim" }, 
+    "nav_chat": { "ENG": "Chat With Me", "BM": "Hubungi Saya" },
+
+    "hero_badge": { "ENG": "About Me", "BM": "Tentang Saya" },
+    "hero_sub": { "ENG": "I HIKE. I RUN.", "BM": "SAYA MENDAKI. SAYA BERLARI." },
+    "hero_and": { "ENG": "AND", "BM": "DAN" },
+    "hero_build": { "ENG": "I CAN BUILD", "BM": "SAYA BOLEH BINA" },
+    "hero_a": { "ENG": "A", "BM": "SEBUAH" },
+    "hero_beautiful": { "ENG": "BEAUTIFUL WEBSITE", "BM": "LAMAN WEB MENARIK" },
+    "hero_foryou": { "ENG": "FOR YOU.", "BM": "UNTUK ANDA." },
+    "hero_desc": { "ENG": "The discipline of the outdoors applied to pixel-perfect code. I build high-performance digital assets tailored for you.", "BM": "Disiplin aktiviti luar diterapkan dalam kod yang sempurna. Saya membina aset digital berprestasi tinggi khusus untuk anda." },
+    "btn_start": { "ENG": "Explore More", "BM": "Bina Website Anda" },
+
+    "work_head": { "ENG": "Our Best Works", "BM": "Karya Terbaik Kami" },
+    "work_desc": { "ENG": "We don't just build websites. We build Assets that generate value.", "BM": "Kami bukan sekadar bina web. Kami bina Aset yang menjana nilai." },
+    "view_details": { "ENG": "View Details", "BM": "Lihat Detail" },
+    "work_1_title": { "ENG": "Personal Branding", "BM": "Personal Branding" }, 
+    "work_1_desc": { "ENG": "High-converting profile websites for professionals.", "BM": "Laman web profil penukaran tinggi untuk profesional." },
+    "work_2_title": { "ENG": "Corporate Branding", "BM": "Corporate Branding" }, 
+    "work_2_desc": { "ENG": "Corporate digital identity establishment.", "BM": "Pembentukan identiti digital korporat." },
+    "work_3_title": { "ENG": "Business System", "BM": "Business System" }, 
+    "work_3_desc": { "ENG": "Management System for Rentals, Clinics, Agencies.", "BM": "Sistem Pengurusan untuk Sewaan, Klinik, Agensi." },
+    
+    "price_badge": { "ENG": "PRICING PACKAGES", "BM": "PAKEJ HARGA" }, 
+    "price_head_1": { "ENG": "YOUR WEBSITE", "BM": "LAMAN WEB ANDA" }, 
+    "price_head_2": { "ENG": "STARTS HERE.", "BM": "BERMULA DI SINI." },
+    "price_sub": { "ENG": "Transparent & Flexible Plans Built for Growth.", "BM": "Pelan Telus & Fleksibel Rekabentuk Khas Untuk Pertumbuhan." }, 
+    "price_btn": { "ENG": "Choose Package", "BM": "Pilih Pakej" },
+    "promo_tag": { "ENG": "RECOMMENDED", "BM": "DISYORKAN" }, 
+    "price_start": { "ENG": "Starts From", "BM": "Bermula Dari" }, 
+    "price_custom": { "ENG": "Custom Offer", "BM": "Harga Tersuai" },
+    "price_limit": { "ENG": "Flexible Packages", "BM": "Pakej Fleksibel" },
+    "price_lms_desc": { "ENG": "Management System for Rentals, Clinics, Agencies, etc.", "BM": "Sistem Pengurusan Sewaan, Klinik, Agensi, dll." },
+    
+    "p1_old": { "ENG": "RM 1000", "BM": "RM 1000" }, "p1_new": { "ENG": "RM 700", "BM": "RM 700" },
+    "p2_old": { "ENG": "RM 1,500", "BM": "RM 1,500" }, "p2_new": { "ENG": "RM 1,000", "BM": "RM 1,000" },
+    "p1_name": { "ENG": "Personal Branding", "BM": "Personal Branding" }, "p1_desc": { "ENG": "Perfect for Agents & Experts", "BM": "Sesuai untuk Ejen & Pakar" },
+    "p2_name": { "ENG": "Corporate Branding", "BM": "Corporate Branding" }, "p2_desc": { "ENG": "For SME & Companies", "BM": "Untuk PKS & Syarikat" },
+
+    "pb_feat_1": { "ENG": "Bio & Portfolio Gallery", "BM": "Bio & Galeri Portfolio" }, "pb_feat_2": { "ENG": "Research List", "BM": "Senarai Kajian" }, "pb_feat_3": { "ENG": "WhatsApp Integration", "BM": "Integrasi WhatsApp" },
+    "cb_feat_1": { "ENG": "Modern Company Profile", "BM": "Profil Syarikat Moden" }, "cb_feat_2": { "ENG": "Product Showcase", "BM": "Pameran Produk" }, "cb_feat_3": { "ENG": "Google Maps & Trust", "BM": "Google Maps & Trust" },
+    "lms_feat_1": { "ENG": "CRM, POS, Sales & Payment", "BM": "CRM, POS, Jualan & Bayaran" }, 
+    "lms_feat_2": { "ENG": "Booking & Rental", "BM": "Tempahan & Sewaan" }, "lms_feat_3": { "ENG": "Attendance & Reports", "BM": "Kehadiran & Laporan" },
+
+    "serv_tag": { "ENG": "MY EXPERTISE", "BM": "KEPAKARAN SAYA" },
+    "serv_sub": { "ENG": "Specialized digital solutions designed to elevate your brand authority and streamline your business operations.", "BM": "Solusi digital khusus yang direka untuk meningkatkan autoriti jenama dan melancarkan operasi perniagaan anda." },
+    "s1_title": { "ENG": "Personal Branding", "BM": "Personal Branding" }, "s1_desc": { "ENG": "High-converting profile websites for professionals.", "BM": "Laman web profil profesional dengan penukaran tinggi." },
+    "s2_title": { "ENG": "Corporate Branding", "BM": "Corporate Branding" }, "s2_desc": { "ENG": "Corporate digital identity establishment.", "BM": "Pembentukan identiti digital korporat." },
+    "s3_title": { "ENG": "Business System", "BM": "Business System" }, "s3_desc": { "ENG": "Management System for Rentals, Clinics, Agencies.", "BM": "Sistem Pengurusan untuk Sewaan, Klinik, Agensi." },
+
+    "port_title": { "ENG": "SELECTED <span class=\"text-orange-600\">WORKS</span>", "BM": "KARYA <span class=\"text-orange-600\">TERPILIH</span>" },
+    "port_sub": { "ENG": "Real Results for Real Clients", "BM": "Hasil Nyata untuk Klien Nyata" },
+
+    "testi_badge": { "ENG": "Testimonials", "BM": "Testimoni" }, "testi_head": { "ENG": "What they say about our website.", "BM": "Apa kata mereka tentang website kami." },
+    "doubt_badge": { "ENG": "Why Choose Us", "BM": "Kenapa Pilih Kami" }, "doubt_head": { "ENG": "YOUR CONCERNS, SOLVED.", "BM": "KERAGUAN ANDA, TERJAWAB." },
+    "d1_q": { "ENG": "IS THIS LEGIT?", "BM": "LEGIT KE NI?" }, "d1_a": { "ENG": "Yes — 100% legit. I’ll do my best to deliver your request.", "BM": "100% legit. Saya cuba buat yang terbaik tunai permintaan anda." },
+    "d2_q": { "ENG": "\"I’m not tech-savvy.\"", "BM": "\"Saya buta IT.\"" }, "d2_a": { "ENG": "Zero coding needed. We handle domain, hosting, and design for you.", "BM": "Tak perlu coding. Kami uruskan domain, hosting, dan design untuk anda." },
+    "d3_q": { "ENG": "\"Can I pay in installments?\"", "BM": "\"Boleh bayar ansuran?\"" }, "d3_a": { "ENG": "Yes! 50% deposit to start, remaining 50% only after completion.", "BM": "Ya! Deposit 50% untuk mula, baki 50% hanya selepas siap." },
+    "d4_q": { "ENG": "\"What if it breaks?\"", "BM": "\"Kalau website rosak?\"" }, "d4_a": { "ENG": "Relax. You get 1 Year Free Maintenance & Technical Support.", "BM": "Tenang. Anda dapat 1 Tahun Maintenance & Support Percuma." },
+    "d5_q": { "ENG": "\"I don't have content.\"", "BM": "\"Tiada idea nak tulis apa.\"" }, "d5_a": { "ENG": "Just give us points. We structure professional copywriting for you.", "BM": "Bagi poin ringkas. Kami susun ayat copywriting profesional untuk anda." },
+    "d6_q": { "ENG": "\"How fast can it be ready?\"", "BM": "\"Berapa lama boleh siap?\"" }, "d6_a": { "ENG": "Rapid development. Personal sites in 3-7 days, Corporate in 7-14 days.", "BM": "Pantas. Web personal siap 3-7 hari, Korporat dalam 7-14 hari." },
+
+    "faq_head": { "ENG": "FREQUENTLY ASKED", "BM": "SOALAN LAZIM" }, 
+    "faq_sub": { "ENG": "Answers to your common questions.", "BM": "Jawapan untuk pertanyaan biasa anda." },
+    
+    "q1": { "ENG": "Who are you?", "BM": "Siapa anda?" },
+    "a1": { 
+        "ENG": "I’m a husband and a father of three, and I serve as a senior lecturer at a public university in Southern Malaysia. Outside of work, I enjoy hiking and I run half marathons. I am a tech enthusiast who enjoys exploring emerging AI and building websites and systems that simplify daily work and streamline business operations.", 
+        "BM": "Saya seorang suami dan bapa kepada tiga anak, serta berkhidmat sebagai pensyarah kanan di universiti awam di Selatan Malaysia. Di luar kerja, saya gemar mendaki dan berlari separuh maraton. Saya peminat teknologi yang suka meneroka AI dan membina sistem yang memudahkan kerja harian." 
+    },
+    
+    "q2": { "ENG": "How long does it take?", "BM": "Berapa lama masa diambil?" }, 
+    "a2": { "ENG": "Personal sites take 3–7 days. Corporate sites take 7–14 days. Complex systems depend on requirements.", "BM": "Laman personal ambil 3–7 hari. Laman korporat 7–14 hari. Sistem kompleks bergantung pada keperluan." },
+    
+    "q3": { "ENG": "What are the payment terms?", "BM": "Bagaimana dengan bayaran?" }, 
+    "a3": { "ENG": "50% deposit to start the project, and the remaining 50% upon completion and handover.", "BM": "Deposit 50% untuk memulakan projek, dan baki 50% setelah siap dan serahan." },
+    
+    "q4": { "ENG": "Is there any support/warranty?", "BM": "Ada jaminan support?" }, 
+    "a4": { "ENG": "The package includes 1 year of free maintenance (technical support for bugs/errors). Content updates and new features after handover are charged separately.", "BM": "Pakej ini termasuk 1 tahun penyelenggaraan percuma (sokongan teknikal untuk pepijat/ralat). Kemaskini konten dan ciri baharu selepas serahan akan dicaj berasingan." },
+    
+    "q5": { "ENG": "What Tech Stack do you use?", "BM": "Guna teknologi apa?" }, 
+    "a5": { "ENG": "We avoid using WordPress templates. Instead, we build from scratch using a \"Mixed-Mode\" approach—combining modern frameworks with AI-assisted coding to ensure high performance and precision.", "BM": "Kami elakkan template WordPress. Kami bina dari kosong menggunakan pendekatan \"Mixed-Mode\"—menggabungkan framework moden dengan bantuan AI untuk prestasi tinggi dan ketepatan." },
+
+    "btn_strava": { "ENG": "Check My Strava", "BM": "Lihat Strava Saya" },
+
+    "ft_links": { "ENG": "Quick Links", "BM": "Pautan Pantas" }, "ft_legal_col": { "ENG": "Terms & Conditions", "BM": "Terma & Syarat" }, "ft_connect": { "ENG": "Connect", "BM": "Hubungan" }, "ft_privacy": { "ENG": "Privacy Policy", "BM": "Dasar Privasi" }, "ft_terms": { "ENG": "Terms of Service", "BM": "Terma Perkhidmatan" }, "ft_cookies": { "ENG": "Cookie Policy", "BM": "Dasar Kuki" }, "ft_copy": { "ENG": "© 2026 MIJ Digital ENT. All Rights Reserved.", "BM": "© 2026 MIJ Digital ENT. Hak Cipta Terpelihara." }, "ft_back": { "ENG": "Back to Top ↑", "BM": "Ke Atas ↑" },
+    "footer_head": { "ENG": "READY TO LAUNCH?", "BM": "SEDIA MELUNCUR?" }, "footer_sub": { "ENG": "Tell us what you need.", "BM": "Beritahu apa yang anda perlukan." }, "btn_wa": { "ENG": "WhatsApp Now", "BM": "WhatsApp Sekarang" }, "btn_contact": { "ENG": "Contact Me", "BM": "Hubungi Saya" }
+}

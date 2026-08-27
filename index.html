@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIJ Digital - Professional Web Solutions</title>
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <meta name="theme-color" content="#ea580c">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600;700;800&family=Outfit:wght@700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <script>
+        tailwind.config = { 
+            theme: { 
+                extend: { 
+                    fontFamily: { 
+                        sans: ['Inter', 'sans-serif'], 
+                        display: ['Outfit', 'sans-serif'] 
+                    } 
+                } 
+            } 
+        }
+    </script>
+
+    <style>
+        @font-face {
+            font-family: 'HonestModernica';
+            src: url('HonestModernica.otf') format('opentype');
+            font-weight: normal; font-style: normal;
+        }
+        [x-cloak] { display: none !important; }
+        img { content-visibility: auto; }
+        .font-modernica { font-family: 'Outfit', 'Inter', sans-serif !important; }
+        .animate-marquee { animation: marquee 20s linear infinite; }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .swiper { width: 100%; padding-top: 50px; padding-bottom: 50px; }
+        .swiper-slide { background-position: center; background-size: cover; width: 300px; height: auto; border-radius: 20px; }
+
+        .mySwiper { width: 100%; padding-top: 10px; padding-bottom: 50px; }
+        .mySwiper .swiper-slide {
+            width: 300px !important; height: 400px !important; background: transparent !important;
+            border: none !important; padding: 0 !important; filter: blur(4px); opacity: 0.55;
+            transition: filter 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+        }
+        .mySwiper .swiper-slide-active { filter: blur(0px) !important; opacity: 1 !important; }
+        .card-wrap-3d { transform: perspective(800px); transform-style: preserve-3d; cursor: pointer; width: 100%; height: 100%; }
+        .card-3d { position: relative; width: 100%; height: 100%; background-color: #121212; overflow: hidden; border-radius: 16px; box-shadow: rgba(0, 0, 0, 0.8) 0 30px 60px 0, inset #333 0 0 0 5px, inset rgba(255, 255, 255, 0.4) 0 0 0 6px; transition: all 0.8s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
+        .card-wrap-3d:hover .card-3d, .swiper-slide-active .card-3d { transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 1.5s cubic-bezier(0.23, 1, 0.32, 1); box-shadow: rgba(234, 88, 12, 0.45) 0 0 40px 5px, rgba(255, 255, 255, 0.9) 0 0 0 1px, rgba(0, 0, 0, 0.9) 0 30px 60px 0, inset #ea580c 0 0 0 5px, inset #ffffff 0 0 0 6px; }
+    </style>
+</head>
+<body class="bg-[#FFFBF5] text-gray-900 font-sans antialiased selection:bg-orange-500 selection:text-white"
+      x-data="{ 
+          lang: localStorage.getItem('site_lang') || 'ENG',
+          mobileMenu: false,
+          scrolled: false,
+          setLang(l) { this.lang = l; localStorage.setItem('site_lang', l); },
+          text: {},
+          data: {}
+      }"
+      x-init="
+          fetch('lang.json').then(r => r.json()).then(d => text = d);
+          fetch('data.json').then(r => r.json()).then(d => data = d);
+      "
+      @scroll.window="scrolled = (window.pageYOffset > 20)">
+
+    <!-- Announcement Bar -->
+    <div class="bg-black text-white py-2 overflow-hidden border-b border-gray-800 text-[11px] sm:text-xs tracking-wider uppercase font-bold z-50 relative">
+        <div class="flex whitespace-nowrap animate-marquee">
+            <span class="mx-4 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
+                <span x-text="data.promo_text_eng && lang==='ENG' ? data.promo_text_eng : (data.promo_text_bm && lang==='BM' ? data.promo_text_bm : (lang==='ENG' ? '🔥 PROMO SPECIAL: 50% DISCOUNT FOR FIRST 10 CLIENTS THIS MONTH!' : '🔥 PROMO KHAS: DISKAUN 50% UNTUK 10 KLIEN PERTAMA BULAN INI!'))"></span>
+            </span>
+            <span class="mx-4 text-orange-500">★</span>
+            <span class="mx-4 flex items-center gap-2">
+                <span x-text="lang === 'ENG' ? '🚀 FREE 1 YEAR HOSTING & DOMAIN INCLUDED' : '🚀 PERCUMA 1 TAHUN HOSTING & DOMAIN'"></span>
+            </span>
+            <span class="mx-4 text-orange-500">★</span>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="fixed top-0 inset-x-0 z-40 transition-all duration-300"
+            :class="scrolled ? 'bg-black/90 backdrop-blur-md py-4 shadow-xl border-b border-white/10' : 'bg-transparent py-6'">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="mij-logo.png" alt="MIJ Logo" class="h-10 w-auto transition duration-300 group-hover:scale-105">
+                <span class="font-modernica font-black text-xl sm:text-2xl tracking-tighter" :class="scrolled ? 'text-white' : 'text-gray-900'">
+                    MIJ<span class="text-orange-600">.</span>DIGITAL
+                </span>
+            </a>
+
+            <nav class="hidden lg:flex items-center gap-8 font-modernica text-xs font-bold tracking-[0.15em] uppercase" :class="scrolled ? 'text-gray-300' : 'text-gray-800'">
+                <a href="#home" class="hover:text-orange-600 transition" x-text="text.nav_home ? text.nav_home[lang] : 'Home'"></a>
+                <a href="#about" class="hover:text-orange-600 transition" x-text="text.nav_about ? text.nav_about[lang] : 'About'"></a>
+                <a href="#services" class="hover:text-orange-600 transition" x-text="text.nav_services ? text.nav_services[lang] : 'Services'"></a>
+                <a href="#portfolio" class="hover:text-orange-600 transition" x-text="text.nav_portfolio ? text.nav_portfolio[lang] : 'Portfolio'"></a>
+                <a href="#pricing" class="hover:text-orange-600 transition" x-text="text.price_badge ? text.price_badge[lang] : 'Pricing'"></a>
+                <a href="#faq" class="hover:text-orange-600 transition" x-text="text.nav_faq ? text.nav_faq[lang] : 'FAQ'"></a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <div class="flex items-center bg-black/10 rounded-full p-1 border border-black/20" :class="scrolled ? 'bg-white/10 border-white/20' : ''">
+                    <button @click="setLang('ENG')" :class="lang === 'ENG' ? 'bg-orange-600 text-white' : (scrolled ? 'text-gray-300' : 'text-gray-700')" class="px-3 py-1 text-[10px] font-bold rounded-full transition-all">ENG</button>
+                    <button @click="setLang('BM')" :class="lang === 'BM' ? 'bg-orange-600 text-white' : (scrolled ? 'text-gray-300' : 'text-gray-700')" class="px-3 py-1 text-[10px] font-bold rounded-full transition-all">BM</button>
+                </div>
+
+                <a href="https://wa.me/601110051787" target="_blank" class="hidden sm:flex items-center gap-2 px-5 py-2.5 bg-orange-600 hover:bg-orange-700 text-white font-modernica font-bold text-xs tracking-wider uppercase rounded-full shadow-lg transition duration-300 hover:scale-105">
+                    <span x-text="text.nav_chat ? text.nav_chat[lang] : 'Chat With Me'"></span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Hero -->
+    <main>
+        <section class="relative w-full min-h-[100vh] flex flex-col lg:flex-row items-stretch bg-[#FFFBF5] overflow-hidden" id="home">
+            <div class="relative w-full lg:w-5/12 order-2 lg:order-1 flex-1 min-h-[40vh] lg:min-h-full z-10">
+                 <div class="w-full h-full bg-[#0a0a0a] overflow-hidden group relative z-10 min-h-[300px] lg:min-h-full">
+                    <img src="hero.jpg" alt="Profile" class="w-full h-full object-cover object-center transition duration-1000 group-hover:scale-105">
+                 </div>
+            </div>
+
+            <div class="w-full lg:w-7/12 flex flex-col justify-center px-6 sm:px-12 pt-36 pb-16 z-20 order-1 lg:order-2 text-left relative text-gray-900">
+                <div class="mx-auto max-w-3xl w-full flex flex-col justify-center">
+                    <div class="mb-4 flex items-center" data-aos="fade-up"> 
+                        <p class="text-orange-600 font-display font-bold tracking-[0.25em] uppercase text-[10px] sm:text-xs flex items-center gap-3">
+                            <span class="w-8 h-[2px] bg-orange-600 inline-block"></span> 
+                            <span x-text="text.hero_badge ? text.hero_badge[lang] : 'About Me'"></span>
+                        </p>
+                    </div>
+
+                    <h2 class="font-modernica text-xl sm:text-2xl lg:text-3xl font-bold text-gray-500 mb-2 leading-tight tracking-wide flex items-center" data-aos="fade-up" x-text="text.hero_sub ? text.hero_sub[lang] : 'I HIKE. I RUN.'"></h2>
+                    
+                    <h1 class="font-modernica text-3xl sm:text-5xl lg:text-7xl font-black leading-[1.05] mb-6 tracking-tighter text-gray-900">
+                        <span class="block" x-text="text.hero_and ? text.hero_and[lang] : 'AND'"></span>
+                        <span class="block text-gray-900" x-text="text.hero_build ? text.hero_build[lang] : 'I CAN BUILD'"></span>
+                        <span class="block">
+                            <span class="text-gray-900" x-text="text.hero_a ? text.hero_a[lang] : 'A'"></span>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-orange-500 to-yellow-500" x-text="text.hero_beautiful ? text.hero_beautiful[lang] : 'BEAUTIFUL WEBSITE'"></span>
+                        </span>
+                        <span class="block text-gray-900" x-text="text.hero_foryou ? text.hero_foryou[lang] : 'FOR YOU.'"></span>
+                    </h1>
+
+                    <div class="mb-8 pl-5 border-l-4 border-orange-600">
+                        <p class="text-sm md:text-base text-gray-600 font-medium leading-relaxed max-w-xl" x-text="text.hero_desc ? text.hero_desc[lang] : 'The discipline of the outdoors applied to pixel-perfect code.'"></p>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#pricing" class="px-8 py-4 bg-black text-white font-modernica font-bold text-xs tracking-widest uppercase hover:bg-orange-600 transition rounded-full shadow-xl">
+                            <span x-text="text.btn_start ? text.btn_start[lang] : 'Explore More'"></span>
+                        </a>
+                        <a href="#portfolio" class="px-8 py-4 bg-white border-2 border-gray-200 text-black font-modernica font-bold text-xs tracking-widest uppercase hover:border-black transition rounded-full">
+                            <span x-text="text.nav_portfolio ? text.nav_portfolio[lang] : 'Portfolio'"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 py-12 text-center text-xs border-t border-gray-900">
+        <p x-text="text.ft_copy ? text.ft_copy[lang] : '© 2026 MIJ Digital ENT. All Rights Reserved.'"></p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof AOS !== 'undefined') { AOS.init({ duration: 800, once: true }); }
+        });
+    </script>
+</body>
+</html>

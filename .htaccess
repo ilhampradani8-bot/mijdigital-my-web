@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# 1. Paksa HTTPS (Gembok Hijau)
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# 2. Redirect dari URL ber-ekstensi .php ke Clean URL (tanpa .php)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^\ ]+)\.php
+RewriteRule ^([^\ ]+)\.php$ /$1 [R=301,L]
+
+# 3. Serve file .php jika diakses tanpa .php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [L]
