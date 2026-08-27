@@ -575,8 +575,8 @@
             .pricing-card-scroll-wrap .jh-pricing-card:hover {
                 transform: rotateY(0deg) scale(1.02);
             }
-        /* Metallic Neumorphism Button (.btn-metal-neo) */
-        .btn-metal-neo {
+        /* Neumorphism Button (.btn-neumorphism) */
+        .btn-neumorphism {
             position: relative;
             display: inline-flex;
             align-items: center;
@@ -584,158 +584,144 @@
             gap: 12px;
             padding: 16px 36px;
             border-radius: 9999px;
-            background: linear-gradient(145deg, #2c323f, #181c24);
-            border: 1.5px solid rgba(255, 255, 255, 0.18);
+            background: #1c2128;
+            box-shadow: 6px 6px 14px #12151a, -6px -6px 14px #262d36, inset 0 1px 1px rgba(255, 255, 255, 0.15);
             color: #ffffff !important;
             font-weight: 800;
             font-size: 15px;
             letter-spacing: 0.05em;
             text-transform: uppercase;
-            box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.6), -4px -4px 12px rgba(255, 255, 255, 0.05), inset 0 1px 2px rgba(255, 255, 255, 0.3);
-            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             cursor: pointer;
             text-decoration: none !important;
         }
 
-        .btn-metal-neo:hover {
-            background: linear-gradient(145deg, #ea580c, #c2410c);
-            border-color: rgba(255, 255, 255, 0.35);
+        .btn-neumorphism:hover {
+            background: #ea580c;
+            border-color: rgba(255, 255, 255, 0.3);
             color: #ffffff !important;
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 12px 28px rgba(234, 88, 12, 0.45), inset 0 1px 3px rgba(255, 255, 255, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(234, 88, 12, 0.45), inset 2px 2px 5px rgba(255, 255, 255, 0.3);
         }
 
-        .btn-metal-neo:active {
-            transform: translateY(1px) scale(0.98);
-            box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.5), inset -2px -2px 6px rgba(255, 255, 255, 0.1);
+        .btn-neumorphism:active {
+            box-shadow: inset 4px 4px 8px #12151a, inset -4px -4px 8px #262d36;
+            transform: translateY(1px);
         }
 
-        /* Cat Loader Page Overlay (Prevents Unstyled Flash) */
-        #cat-loader-overlay {
+        /* Fullscreen Animated Text Page Loader Overlay */
+        #cat-loader-overlay, #page-loader-overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
-            background-color: #e6dcdc;
+            background: #000000;
             z-index: 9999999;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
             opacity: 1;
             visibility: visible;
             transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.5s ease;
         }
 
-        #cat-loader-overlay.fade-out {
+        #cat-loader-overlay.fade-out, #page-loader-overlay.fade-out {
             opacity: 0;
             visibility: hidden;
             pointer-events: none;
         }
 
-        .cat-loader-box {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: #e6dcdc;
-        }
-
-        .cat-loader-box .cat {
-            position: relative;
-            width: 12em;
-            height: 12em;
-            overflow: hidden;
-            background-color: #e6dcdc;
-        }
-
-        .cat-loader-box .cat-part {
+        #load {
             position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            animation: cat-rotating 2.79s cubic-bezier(.65, .54, .12, .93) infinite;
+            width: 600px;
+            height: 36px;
+            left: 50%;
+            top: 45%;
+            margin-left: -300px;
+            overflow: visible;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            cursor: default;
         }
 
-        .cat-loader-box .cat-part::before {
-            content: '';
+        #load div {
             position: absolute;
-            width: 50%;
-            height: 50%;
-            background-size: 200%;
-            background-repeat: no-repeat;
-            background-image: url('https://images.weserv.nl/?url=i.imgur.com/M1raXX3.png&il');
+            width: 20px;
+            height: 36px;
+            opacity: 0;
+            font-family: 'Outfit', Helvetica, Arial, sans-serif;
+            font-weight: 900;
+            font-size: 26px;
+            animation: move 2s linear infinite;
+            -o-animation: move 2s linear infinite;
+            -moz-animation: move 2s linear infinite;
+            -webkit-animation: move 2s linear infinite;
+            transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            color: #35C4F0;
         }
 
-        .cat-loader-box .cat__head::before {
-            top: 0;
-            right: 0;
-            background-position: 100% 0%;
-            transform-origin: 0% 100%;
-            transform: rotate(90deg);
+        #load div:nth-child(2) { animation-delay: 0.2s; -o-animation-delay: 0.2s; -moz-animation-delay: 0.2s; -webkit-animation-delay: 0.2s; }
+        #load div:nth-child(3) { animation-delay: 0.4s; -o-animation-delay: 0.4s; -webkit-animation-delay: 0.4s; }
+        #load div:nth-child(4) { animation-delay: 0.6s; -o-animation-delay: 0.6s; -moz-animation-delay: 0.6s; -webkit-animation-delay: 0.6s; }
+        #load div:nth-child(5) { animation-delay: 0.8s; -o-animation-delay: 0.8s; -moz-animation-delay: 0.8s; -webkit-animation-delay: 0.8s; }
+        #load div:nth-child(6) { animation-delay: 1s; -o-animation-delay: 1s; -moz-animation-delay: 1s; -webkit-animation-delay: 1s; }
+        #load div:nth-child(7) { animation-delay: 1.2s; -o-animation-delay: 1.2s; -moz-animation-delay: 1.2s; -webkit-animation-delay: 1.2s; }
+
+        @keyframes move {
+            0% { left: 0; opacity: 0; }
+            35% { left: 41%; transform: rotate(0deg); opacity: 1; }
+            65% { left: 59%; transform: rotate(0deg); opacity: 1; }
+            100% { left: 100%; transform: rotate(-180deg); opacity: 0; }
         }
 
-        .cat-loader-box .cat__tail {
-            animation-delay: .2s;
+        @-moz-keyframes move {
+            0% { left: 0; opacity: 0; }
+            35% { left: 41%; -moz-transform: rotate(0deg); transform: rotate(0deg); opacity: 1; }
+            65% { left: 59%; -moz-transform: rotate(0deg); transform: rotate(0deg); opacity: 1; }
+            100% { left: 100%; -moz-transform: rotate(-180deg); transform: rotate(-180deg); opacity: 0; }
         }
 
-        .cat-loader-box .cat__tail::before {
-            left: 0;
-            bottom: 0;
-            background-position: 0% 100%;
-            transform-origin: 100% 0%;
-            transform: rotate(-30deg);
+        @-webkit-keyframes move {
+            0% { left: 0; opacity: 0; }
+            35% { left: 41%; -webkit-transform: rotate(0deg); transform: rotate(0deg); opacity: 1; }
+            65% { left: 59%; -webkit-transform: rotate(0deg); transform: rotate(0deg); opacity: 1; }
+            100% { left: 100%; -webkit-transform: rotate(-180deg); transform: rotate(-180deg); opacity: 0; }
         }
 
-        .cat-loader-box .cat__body {
-            animation-delay: .1s;
-        }
-
-        .cat-loader-box .cat__body:nth-of-type(2) {
-            animation-delay: .2s;
-        }
-
-        .cat-loader-box .cat__body::before {
-            right: 0;
-            bottom: 0;
-            background-position: 100% 100%;
-            transform-origin: 0% 0%;
-        }
-
-        @keyframes cat-rotating {
-            from { transform: rotate(720deg); }
-            to { transform: none; }
-        }
-
-        .cat-loader-title {
-            font-family: 'Outfit', 'Inter', sans-serif;
-            font-size: 1.1rem;
-            font-weight: 800;
-            color: #2b2b2b;
-            margin-top: 1.5rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
+        @-o-keyframes move {
+            0% { left: 0; opacity: 0; }
+            35% { left: 41%; -o-transform: rotate(0deg); transform: rotate(0deg); opacity: 1; }
+            65% { left: 59%; -o-transform: rotate(0deg); transform: rotate(0deg); opacity: 1; }
+            100% { left: 100%; -o-transform: rotate(-180deg); transform: rotate(-180deg); opacity: 0; }
         }
     </style>
 </head>
 <body x-data="contentData" class="bg-white text-black antialiased selection:bg-orange-500 selection:text-white overflow-x-hidden">
 
-    <!-- Full Screen Cat Loader Overlay -->
+    <!-- Full Screen Animated Text Loader Overlay -->
     <div id="cat-loader-overlay">
-        <div class="cat-loader-box">
-            <div class="cat">
-                <div class="cat-part cat__body"></div>
-                <div class="cat-part cat__body"></div>
-                <div class="cat-part cat__tail"></div>
-                <div class="cat-part cat__head"></div>
-            </div>
+        <div id="load">
+            <div>G</div>
+            <div>N</div>
+            <div>I</div>
+            <div>D</div>
+            <div>A</div>
+            <div>O</div>
+            <div>L</div>
         </div>
-        <div class="cat-loader-title">LOADING MIJ DIGITAL...</div>
     </div>
 
     <script>
         (function() {
             function hideCatLoader() {
-                var loader = document.getElementById('cat-loader-overlay');
+                var loader = document.getElementById('cat-loader-overlay') || document.getElementById('page-loader-overlay');
                 if (loader && !loader.classList.contains('fade-out')) {
                     loader.classList.add('fade-out');
                     setTimeout(function() {
@@ -745,15 +731,15 @@
             }
 
             if (document.readyState === 'complete') {
-                setTimeout(hideCatLoader, 300);
+                setTimeout(hideCatLoader, 400);
             } else {
                 window.addEventListener('load', function() {
-                    setTimeout(hideCatLoader, 300);
+                    setTimeout(hideCatLoader, 400);
                 });
             }
 
-            // Fallback safety timeout (2.5 seconds max)
-            setTimeout(hideCatLoader, 2500);
+            // Fallback safety timeout (4 seconds max)
+            setTimeout(hideCatLoader, 4000);
         })();
     </script>
 <?php 
