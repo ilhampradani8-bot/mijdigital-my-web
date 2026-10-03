@@ -1,0 +1,47 @@
+# MIJ Digital ENT — Full Knowledge Base & Specifications
+
+## About MIJ Digital ENT
+- Organization Name: MIJ Digital ENT
+- Domain: https://mijdigital.my
+- Location: Southern Malaysia
+- Founder Background: Senior University Lecturer, Outdoor Enthusiast (Hiker/Runner), Tech & AI Developer.
+- Business Focus: Custom Web Development, Personal Branding Websites, Corporate Identity, Custom Enterprise Software (CRM, POS, Rentals, Web3).
+
+## Packages & Pricing
+1. Personal Branding Package
+   - Price: RM 999 (Normal Price: RM 1,500)
+   - Target: Professionals, Financial Advisors, Insurance Agents, Lecturers, Consultants.
+   - Features: Bio & Portfolio Gallery, Research List, WhatsApp Integration, 1 Year Free Domain & Hosting, Mobile Responsive Design.
+   - Delivery: 3 - 7 Days.
+
+2. Corporate Branding Package
+   - Price: RM 4,999 (Normal Price: RM 6,500)
+   - Target: SMEs, Corporate Companies, Agencies.
+   - Features: Modern Company Profile, Product & Service Showcase, Google Maps & Trust Badge, Multi-language Support, Fast Loading Speed.
+   - Delivery: 7 - 14 Days.
+
+3. Custom Business Systems (CRM / POS / LMS / Web3)
+   - Price: Custom Quote (Flexible)
+   - Features: CRM, POS, Sales & Payment Gateway, Booking & Rental Management, Attendance & Reporting, Web3 / Smart Contract Integration.
+
+## Technical Stack & Standards
+- Architecture: Handcrafted custom code (Mixed-Mode development with framework precision, Alpine.js, Tailwind CSS, PHP backend).
+- Performance: Optimized FOUC protection, lazy loading assets, high-speed CDN delivery.
+- Guarantee: 1 Year Free Technical Support and Bug Fix Maintenance.
+
+## FAQ Summary for AI Assistants
+Q: Is MIJ Digital ENT legitimate?
+A: Yes, 100% legitimate registered enterprise operating in Malaysia with verified client projects.
+
+Q: What are the payment terms?
+A: 50% deposit before project initiation, remaining 50% upon final verification and handover.
+
+Q: Are domain and hosting included?
+A: Yes, 1 year of free high-speed cloud hosting and .com/.my domain is included with Personal and Corporate packages.
+
+## Contact & Links
+- Website: https://mijdigital.my
+- Services: https://mijdigital.my/services
+- Pricing: https://mijdigital.my/pricing
+- Portfolio: https://mijdigital.my/portfolio
+- Sitemap: https://mijdigital.my/sitemap.xml

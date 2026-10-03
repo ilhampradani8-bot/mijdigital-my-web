@@ -1,3 +1,59 @@
+# robots.txt for MIJ Digital ENT (https://mijdigital.my)
 User-agent: *
 Allow: /
+Disallow: /admin.php
+Disallow: /save.php
+Disallow: /upload.php
+Disallow: /writable/
+
+# Search Engine Crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# AI Crawlers & LLM Engines (AI SEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+# Sitemap & LLM Metadata Locations
 Sitemap: https://mijdigital.my/sitemap.xml
+Allow: /llms.txt
+Allow: /llms-full.txt

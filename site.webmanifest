@@ -1,0 +1,22 @@
+{
+  "name": "MIJ Digital ENT - Professional Web Solutions",
+  "short_name": "MIJ Digital",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#ea580c",
+  "orientation": "portrait-primary",
+  "description": "High-performance custom web development, personal branding websites, corporate digital identity, and automated business systems in Malaysia."
+}

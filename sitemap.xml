@@ -1,57 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+   <!-- Home Page -->
    <url>
       <loc>https://mijdigital.my/</loc>
-      <lastmod>2026-08-27</lastmod>
+      <lastmod>2026-09-23</lastmod>
       <changefreq>daily</changefreq>
       <priority>1.00</priority>
+      <image:image>
+         <image:loc>https://mijdigital.my/hero.jpg</image:loc>
+         <image:title>MIJ Digital ENT Hero Profile</image:title>
+      </image:image>
+      <image:image>
+         <image:loc>https://mijdigital.my/mij-logo.png</image:loc>
+         <image:title>MIJ Digital ENT Logo</image:title>
+      </image:image>
    </url>
    <url>
       <loc>https://mijdigital.my/index</loc>
-      <lastmod>2026-08-27</lastmod>
+      <lastmod>2026-09-23</lastmod>
       <changefreq>daily</changefreq>
       <priority>1.00</priority>
    </url>
+
+   <!-- Services Page -->
    <url>
       <loc>https://mijdigital.my/services</loc>
-      <lastmod>2026-08-27</lastmod>
+      <lastmod>2026-09-23</lastmod>
       <changefreq>weekly</changefreq>
-      <priority>0.90</priority>
+      <priority>0.95</priority>
    </url>
+
+   <!-- Pricing Page -->
+   <url>
+      <loc>https://mijdigital.my/pricing</loc>
+      <lastmod>2026-09-23</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.95</priority>
+   </url>
+
+   <!-- Portfolio Page -->
    <url>
       <loc>https://mijdigital.my/portfolio</loc>
-      <lastmod>2026-08-27</lastmod>
+      <lastmod>2026-09-23</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.90</priority>
+      <image:image>
+         <image:loc>https://mijdigital.my/pos-full.png</image:loc>
+         <image:title>MIJ Digital Business POS &amp; CRM System</image:title>
+      </image:image>
    </url>
+
+   <!-- FAQ Page -->
    <url>
       <loc>https://mijdigital.my/faq</loc>
-      <lastmod>2026-08-27</lastmod>
+      <lastmod>2026-09-23</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.80</priority>
    </url>
+
+   <!-- Privacy Policy -->
    <url>
       <loc>https://mijdigital.my/privacy</loc>
-      <lastmod>2026-08-27</lastmod>
+      <lastmod>2026-09-23</lastmod>
       <changefreq>yearly</changefreq>
       <priority>0.50</priority>
    </url>
+
+   <!-- Terms of Service -->
    <url>
       <loc>https://mijdigital.my/terms</loc>
-      <lastmod>2026-08-27</lastmod>
+      <lastmod>2026-09-23</lastmod>
       <changefreq>yearly</changefreq>
       <priority>0.50</priority>
    </url>
+
+   <!-- Cookie Policy -->
    <url>
       <loc>https://mijdigital.my/cookies</loc>
-      <lastmod>2026-08-27</lastmod>
+      <lastmod>2026-09-23</lastmod>
       <changefreq>yearly</changefreq>
       <priority>0.50</priority>
-   </url>
-   <url>
-      <loc>https://mijdigital.my/admin</loc>
-      <lastmod>2026-08-27</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.30</priority>
    </url>
 </urlset>

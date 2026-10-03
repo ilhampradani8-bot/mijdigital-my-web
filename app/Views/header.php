@@ -1,13 +1,117 @@
+<?php 
+$currentDomain = "https://mijdigital.my";
+$metaTitle = isset($pageTitle) ? $pageTitle : 'MIJ Digital - Professional Web Solutions & System Development';
+$metaDescription = isset($pageDescription) ? $pageDescription : 'Pakar pembinaan website profesional, personal branding, corporate profile & sistem perniagaan khas di Malaysia. Include 1 Tahun Free Domain & Hosting.';
+$metaKeywords = isset($pageKeywords) ? $pageKeywords : 'bina website malaysia, web development, personal branding website, corporate website, sistem perniagaan, web design, mij digital';
+$canonicalUrl = $currentDomain . strtok($_SERVER['REQUEST_URI'] ?? '/', '?');
+?>
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="ms" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo isset($pageTitle) ? $pageTitle : 'MIJ Digital ENT'; ?></title>
+    <title><?php echo htmlspecialchars($metaTitle); ?></title>
     
+    <!-- Primary Meta Tags -->
+    <meta name="description" content="<?php echo htmlspecialchars($metaDescription); ?>">
+    <meta name="keywords" content="<?php echo htmlspecialchars($metaKeywords); ?>">
+    <meta name="author" content="MIJ Digital ENT">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large">
+    
+    <!-- Bing & Google Webmaster Verification Placeholders -->
+    <meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE_HERE">
+    <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE_HERE">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="<?php echo htmlspecialchars($canonicalUrl); ?>">
+
+    <!-- Favicon & PWA Webmanifest -->
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="manifest" href="site.webmanifest">
     <meta name="theme-color" content="#ea580c">
+
+    <!-- Open Graph / Social & AI Previews (Bing Copilot, WhatsApp, Facebook, LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<?php echo htmlspecialchars($canonicalUrl); ?>">
+    <meta property="og:site_name" content="MIJ Digital ENT">
+    <meta property="og:title" content="<?php echo htmlspecialchars($metaTitle); ?>">
+    <meta property="og:description" content="<?php echo htmlspecialchars($metaDescription); ?>">
+    <meta property="og:image" content="<?php echo $currentDomain; ?>/hero.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="ms_MY">
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<?php echo htmlspecialchars($metaTitle); ?>">
+    <meta name="twitter:description" content="<?php echo htmlspecialchars($metaDescription); ?>">
+    <meta name="twitter:image" content="<?php echo $currentDomain; ?>/hero.jpg">
+
+    <!-- Schema.org Structured Data (JSON-LD) for Bing, Google, ChatGPT & Perplexity AI -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://mijdigital.my/#organization",
+          "name": "MIJ Digital ENT",
+          "url": "https://mijdigital.my",
+          "logo": "https://mijdigital.my/mij-logo.png",
+          "image": "https://mijdigital.my/hero.jpg",
+          "description": "Pakar pembinaan website profesional, personal branding, corporate profile & sistem perniagaan khas di Malaysia.",
+          "priceRange": "RM 999 - RM 5000",
+          "areaServed": "MY",
+          "sameAs": [
+            "https://mijdigital.my"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://mijdigital.my/#website",
+          "url": "https://mijdigital.my",
+          "name": "MIJ Digital ENT",
+          "publisher": {
+            "@id": "https://mijdigital.my/#organization"
+          },
+          "inLanguage": "ms-MY"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://mijdigital.my/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Berapa lama masa diambil untuk bina website?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Laman personal mengambil masa 3-7 hari. Laman korporat 7-14 hari. Sistem perniagaan khas mengikut keperluan."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Adakah domain dan hosting percuma disediakan?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ya! Semua pakej Personal dan Korporat termasuk 1 Tahun Percuma Domain (.com/.my) & Cloud Hosting Berkelajuan Tinggi."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Bagaimana dengan jaminan dan sokongan teknikal?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Setiap pakej merangkumi 1 Tahun Maintenance & Technical Support Percuma untuk jaminan prestasi website anda."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

@@ -1,0 +1,27 @@
+# MIJ Digital ENT
+
+> High-performance digital assets, custom website development, personal branding, corporate identity, and automated business systems (CRM/POS/Web3) in Malaysia.
+
+## Overview
+MIJ Digital ENT is a boutique web development and digital solutions studio based in Southern Malaysia. Founded by a senior lecturer and tech enthusiast, MIJ Digital ENT specializes in building fast, modern, custom websites and web applications without rely-on generic WordPress templates.
+
+## Main Services
+- [Personal Branding Websites](https://mijdigital.my/services#personal): High-converting profile websites for professionals, agents, lecturers, advisors, and executives. (Starting from RM 999)
+- [Corporate Branding Websites](https://mijdigital.my/services#corporate): Modern corporate digital identity, product showcases, and company profiles for SMEs. (Starting from RM 4,999)
+- [Custom Business Systems](https://mijdigital.my/services#system): Management systems for rental management, POS, CRM, sales automation, clinic booking, and Web3 / dApp integrations.
+
+## Key Features & Value Proposition
+- 1 Year Free Domain (.com / .my) & Cloud Hosting included.
+- 1 Year Free Technical Maintenance & Bug Fix Warranty.
+- Rapid turnaround (Personal: 3-7 days | Corporate: 7-14 days).
+- Flexible payment structure: 50% deposit to start, 50% upon delivery.
+- AI-assisted modern tech stack ("Mixed-Mode" engineering) with zero bloated templates.
+
+## Links & Knowledge Base
+- [Full LLM Specification & Details](https://mijdigital.my/llms-full.txt): Deep technical & service details for AI tools.
+- [Services Overview](https://mijdigital.my/services)
+- [Pricing Packages](https://mijdigital.my/pricing)
+- [Client Portfolio](https://mijdigital.my/portfolio)
+- [Frequently Asked Questions (FAQ)](https://mijdigital.my/faq)
+- [Privacy Policy](https://mijdigital.my/privacy)
+- [Terms of Service](https://mijdigital.my/terms)

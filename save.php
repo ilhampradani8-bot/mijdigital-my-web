@@ -7,7 +7,7 @@ header("Access-Control-Allow-Headers: Content-Type");
 // Cek apakah data dikirim via POST
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
-    echo json_encode(["status" => "error", "message" => "Method Not Allowed. Harus di-upload ke Hosting (cPanel) agar PHP jalan."]);
+    echo json_encode(["status" => "error", "message" => "Method Not Allowed. Request harus menggunakan POST."]);
     exit;
 }
 
