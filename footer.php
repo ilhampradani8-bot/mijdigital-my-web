@@ -4,7 +4,7 @@
 <style>
 /* Professional Footer Styling */
 .footer-section {
-  background: #0d0d0f;
+  background: #09090b; /* Dark bar for Find Us / Call Us / Mail Us */
   position: relative;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -31,10 +31,13 @@
   color: #9ca3af;
   font-size: 14px;
 }
+
+/* White Bottom Footer Section where MIJ Logo lives */
 .footer-content-wrap {
-  background: #1c1c21;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding-top: 45px;
+  background: #ffffff;
+  color: #111827;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 50px;
 }
 .footer-content {
   position: relative;
@@ -46,14 +49,14 @@
 .footer-text p {
   margin-bottom: 20px;
   font-size: 14px;
-  color: #9ca3af;
+  color: #4b5563;
   line-height: 1.8;
 }
 .footer-social-icon span {
-  color: #fff;
+  color: #111827;
   display: block;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 15px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -67,7 +70,7 @@
   height: 40px;
   border-radius: 50%;
   margin-right: 10px;
-  background: #282830;
+  background: #1f2937;
   transition: all 0.3s ease;
 }
 .footer-social-icon a:hover {
@@ -80,9 +83,9 @@
 .web3-bg { background: #ea580c !important; }
 
 .footer-widget-heading h3 {
-  color: #fff;
+  color: #111827;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 30px;
   position: relative;
 }
@@ -107,8 +110,9 @@
   margin-bottom: 12px;
 }
 .footer-widget ul li a {
-  color: #9ca3af;
+  color: #4b5563;
   font-size: 14px;
+  font-weight: 500;
   transition: all 0.3s ease;
   display: inline-block;
 }
@@ -120,16 +124,20 @@
   position: relative;
   overflow: hidden;
   border-radius: 9999px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
 }
 .subscribe-form input {
   width: 100%;
   padding: 14px 60px 14px 20px;
-  background: #282830;
+  background: #f9fafb;
   border: none;
-  color: #fff;
+  color: #111827;
   font-size: 14px;
   outline: none;
+}
+.subscribe-form input::placeholder {
+  color: #9ca3af;
 }
 .subscribe-form button {
   position: absolute;
@@ -150,14 +158,14 @@
   font-size: 16px;
 }
 .copyright-area {
-  background: #141418;
+  background: #f9fafb;
   padding: 20px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid #e5e7eb;
 }
 .copyright-text p {
   margin: 0;
   font-size: 13px;
-  color: #9ca3af;
+  color: #6b7280;
 }
 .copyright-text p a {
   color: #ea580c;
@@ -169,7 +177,7 @@
 }
 .footer-menu li a {
   font-size: 13px;
-  color: #9ca3af;
+  color: #6b7280;
   transition: color 0.3s ease;
 }
 .footer-menu li a:hover {
@@ -180,7 +188,7 @@
 <footer class="footer-section text-white pt-12">
     <div class="max-w-7xl mx-auto px-6">
         
-        <!-- Top CTA Bar (Find Us, Call Us, Mail Us) -->
+        <!-- Top CTA Bar (Find Us, Call Us, Mail Us - DARK THEME) -->
         <div class="footer-cta pb-8 mb-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="single-cta">
@@ -209,8 +217,8 @@
 
     </div>
 
-    <!-- Main Footer Content Below Line (Sleek Gray Background) -->
-    <div class="footer-content-wrap">
+    <!-- Main Footer Content Below Line (CLEAN WHITE BACKGROUND FOR LOGO & CONTENT) -->
+    <div class="footer-content-wrap text-gray-900">
         <div class="max-w-7xl mx-auto px-6">
             <div class="footer-content pb-12">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
@@ -250,7 +258,7 @@
                                 <li><a href="services" x-text="text?.nav_services?.[lang] || 'Services'">Services</a></li>
                                 <li><a href="portfolio" x-text="text?.nav_portfolio?.[lang] || 'Portfolio'">Portfolio</a></li>
                                 <li><a href="faq" x-text="text?.nav_faq?.[lang] || 'FAQ'">FAQ</a></li>
-                                <li><a href="https://tradingsafe.mijdigital.my" target="_blank" class="text-orange-400 font-bold">TradingSafe</a></li>
+                                <li><a href="https://tradingsafe.mijdigital.my" target="_blank" class="text-orange-600 font-bold">TradingSafe</a></li>
                                 <li><a href="privacy" x-text="text?.ft_privacy?.[lang] || 'Privacy'">Privacy</a></li>
                                 <li><a href="terms" x-text="text?.ft_terms?.[lang] || 'Terms'">Terms</a></li>
                                 <li><a href="cookies" x-text="text?.ft_cookies?.[lang] || 'Cookies'">Cookies</a></li>
@@ -297,7 +305,7 @@
                             <li><a href="privacy" x-text="text?.ft_privacy?.[lang] || 'Privacy'">Privacy</a></li>
                             <li><a href="cookies" x-text="text?.ft_cookies?.[lang] || 'Cookies'">Cookies</a></li>
                         </ul>
-                        <a href="#" @click.prevent="window.scrollTo({top: 0, behavior: 'smooth'})" class="text-xs font-bold text-orange-500 hover:text-orange-400 transition ml-4 uppercase tracking-wider">Back to Top ↑</a>
+                        <a href="#" @click.prevent="window.scrollTo({top: 0, behavior: 'smooth'})" class="text-xs font-bold text-orange-600 hover:text-orange-700 transition ml-4 uppercase tracking-wider">Back to Top ↑</a>
                     </div>
                 </div>
             </div>
