@@ -53,7 +53,7 @@ if (file_exists($dataFile)) {
 </section>
 
 <section class="max-w-7xl mx-auto px-6 pb-32">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
         
         <?php if (!empty($portfolioItems)): ?>
             <?php foreach ($portfolioItems as $index => $item): 
@@ -62,39 +62,44 @@ if (file_exists($dataFile)) {
                 $itemLink = htmlspecialchars($item['link'] ?? '#');
                 $itemImg = !empty($item['images'][0]) ? htmlspecialchars($item['images'][0]) : '';
             ?>
-            <a href="<?= $itemLink ?>" target="_blank" rel="noopener noreferrer" class="group relative block" data-aos="fade-up" data-aos-delay="<?= ($index % 4) * 100 ?>">
+            <a href="<?= $itemLink ?>" target="_blank" rel="noopener noreferrer" class="group relative block bg-white border-2 border-gray-200 hover:border-black p-4 sm:p-5 transition-all duration-300 shadow-sm hover:shadow-2xl" data-aos="fade-up" data-aos-delay="<?= ($index % 4) * 100 ?>">
                 
-                <div class="aspect-[4/3] bg-gray-100 rounded-[2.5rem] overflow-hidden relative mb-6 border border-gray-200 shadow-sm group-hover:shadow-2xl transition duration-500">
+                <!-- Kotak Tajam (Sharp Rectangle) 16:9 agar gambar website utuh dan tidak terpotong sudutnya -->
+                <div class="aspect-video w-full bg-gray-100 overflow-hidden relative mb-5 border border-gray-300">
                     
                     <?php if (!empty($itemImg)): ?>
-                        <img src="<?= $itemImg ?>" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Portfolio <?= $itemName ?> - <?= $itemRole ?>" loading="lazy">
+                        <img src="<?= $itemImg ?>" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" alt="Portfolio <?= $itemName ?> - <?= $itemRole ?>" loading="lazy">
                     <?php else: ?>
                         <div class="absolute inset-0 flex items-center justify-center bg-gray-50">
-                            <svg class="w-20 h-20 text-gray-300 group-hover:text-orange-600 transition duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            <svg class="w-16 h-16 text-gray-300 group-hover:text-orange-600 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                         </div>
                     <?php endif; ?>
                     
                     <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition"></div>
                     
-                    <div class="absolute bottom-6 right-6 bg-black text-white px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition transform translate-y-2 group-hover:translate-y-0 shadow-lg">
+                    <!-- Badge Kotak Tajam -->
+                    <div class="absolute bottom-4 right-4 bg-black text-white px-4 py-2 text-xs font-black uppercase tracking-widest opacity-0 group-hover:opacity-100 transition transform translate-y-1 group-hover:translate-y-0 shadow-lg">
                         Visit Site ↗
                     </div>
                 </div>
                 
-                <div class="flex justify-between items-end px-2">
-                    <div>
-                        <span class="text-orange-600 font-bold tracking-widest text-xs uppercase mb-2 block"><?= $itemRole ?></span>
-                        <h2 class="text-3xl md:text-4xl font-display font-black leading-none mb-1 group-hover:text-orange-600 transition text-black"><?= $itemName ?></h2>
-                        <p class="text-gray-500 font-medium text-lg"><?= $itemRole ?></p>
+                <!-- Detail Card Kotak Tajam -->
+                <div class="flex justify-between items-end px-1 pt-1">
+                    <div class="pr-4">
+                        <span class="text-orange-600 font-bold tracking-widest text-xs uppercase mb-1.5 block"><?= $itemRole ?></span>
+                        <h2 class="text-2xl md:text-3xl font-display font-black leading-tight mb-1 group-hover:text-orange-600 transition text-black"><?= $itemName ?></h2>
+                        <p class="text-gray-500 font-medium text-sm md:text-base"><?= $itemRole ?></p>
                     </div>
-                    <div class="w-14 h-14 rounded-full border border-gray-300 flex items-center justify-center group-hover:bg-black group-hover:border-black group-hover:text-white transition shadow-sm">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    
+                    <!-- Tombol Arrow Kotak Tajam (Sharp Button) -->
+                    <div class="w-12 h-12 border-2 border-black flex items-center justify-center shrink-0 group-hover:bg-black group-hover:text-white transition shadow-sm">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                     </div>
                 </div>
             </a>
             <?php endforeach; ?>
         <?php else: ?>
-            <div class="col-span-full py-20 text-center bg-gray-50 rounded-[3rem] border-2 border-dashed border-gray-200">
+            <div class="col-span-full py-20 text-center bg-gray-50 border-2 border-dashed border-gray-300">
                 <svg class="w-16 h-16 text-gray-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"></path></svg>
                 <p class="text-gray-500 font-bold text-lg">Portfolio list is empty.</p>
                 <p class="text-sm text-orange-600 mt-2">Please add projects via Admin Panel.</p>
