@@ -20,6 +20,9 @@ $canonicalUrl = $currentDomain . strtok($_SERVER['REQUEST_URI'] ?? '/', '?');
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
     <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large">
     
+    <!-- Google Search Console Verification Tag -->
+    <meta name="google-site-verification" content="8Rv3gM5M69S7hbBPautJ4Somd2QQzb6AR3-8y7lxTXI">
+
     <!-- Canonical & Multilingual Alternate Links -->
     <link rel="canonical" href="<?php echo htmlspecialchars($canonicalUrl); ?>">
     <link rel="alternate" hreflang="ms-MY" href="<?php echo htmlspecialchars($canonicalUrl); ?>">
