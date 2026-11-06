@@ -928,14 +928,14 @@ $is_faq = ($current_page == 'faq.php' || $current_page == 'faq');
                         
                         <div x-show="openHome" 
                              x-transition:enter="transition ease-out duration-150"
-                             x-transition:enter-start="opacity-0 scale-95 -translate-y-1"
+                             x-transition:enter-start="opacity-0 scale-95 -translate-y-2"
                              x-transition:enter-end="opacity-100 scale-100 translate-y-0"
                              x-transition:leave="transition ease-in duration-100"
                              x-transition:leave-start="opacity-100 scale-100 translate-y-0"
-                             x-transition:leave-end="opacity-0 scale-95 -translate-y-1"
+                             x-transition:leave-end="opacity-0 scale-95 -translate-y-2"
                              @click.away="openHome = false"
-                             class="absolute left-0 top-full pt-1.5 w-48 z-50">
-                            <div class="bg-[#181d26]/95 border border-white/15 text-white rounded-2xl shadow-2xl overflow-hidden text-xs font-bold py-1.5 backdrop-blur-xl">
+                             class="absolute left-0 top-full pt-4 w-52 z-50">
+                            <div class="bg-[#181d26]/75 border border-white/20 text-white rounded-2xl shadow-[0_20px_45px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.25)] overflow-hidden text-xs font-bold py-2 backdrop-blur-2xl">
                                 <a href="index#home" class="flex items-center gap-2 px-4 py-2 hover:bg-orange-600/90 transition text-gray-200 hover:text-white">
                                     <span class="w-1.5 h-1.5 rounded-full bg-orange-500"></span>
                                     <span x-text="text.nav_home[lang]">Home</span>
@@ -966,14 +966,14 @@ $is_faq = ($current_page == 'faq.php' || $current_page == 'faq');
                         
                         <div x-show="openServices" 
                              x-transition:enter="transition ease-out duration-150"
-                             x-transition:enter-start="opacity-0 scale-95 -translate-y-1"
+                             x-transition:enter-start="opacity-0 scale-95 -translate-y-2"
                              x-transition:enter-end="opacity-100 scale-100 translate-y-0"
                              x-transition:leave="transition ease-in duration-100"
                              x-transition:leave-start="opacity-100 scale-100 translate-y-0"
-                             x-transition:leave-end="opacity-0 scale-95 -translate-y-1"
+                             x-transition:leave-end="opacity-0 scale-95 -translate-y-2"
                              @click.away="openServices = false"
-                             class="absolute left-0 top-full pt-1.5 w-60 z-50">
-                            <div class="bg-[#181d26]/95 border border-white/15 text-white rounded-2xl shadow-2xl overflow-hidden text-xs font-bold py-1.5 backdrop-blur-xl">
+                             class="absolute left-0 top-full pt-4 w-64 z-50">
+                            <div class="bg-[#181d26]/75 border border-white/20 text-white rounded-2xl shadow-[0_20px_45px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.25)] overflow-hidden text-xs font-bold py-2 backdrop-blur-2xl">
                                 <a href="services#personal-branding" class="flex items-center gap-2.5 px-4 py-2.5 hover:bg-orange-600/90 transition border-b border-white/5">
                                     <span class="w-2 h-2 rounded-full bg-orange-500 shrink-0"></span>
                                     <div>
@@ -1020,9 +1020,9 @@ $is_faq = ($current_page == 'faq.php' || $current_page == 'faq');
                             <span x-text="lang"></span>
                             <svg class="w-3 h-3 text-orange-400 transform transition-transform" :class="openLang ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </button>
-                        <div x-show="openLang" @click.away="openLang = false" x-transition class="absolute right-0 mt-2 w-20 bg-gray-800 border border-gray-700 text-white rounded-xl shadow-2xl overflow-hidden text-xs font-bold py-1 z-50">
-                            <button @click="lang = 'ENG'; openLang = false" class="w-full text-left px-3 py-1.5 hover:bg-orange-600 transition" :class="lang === 'ENG' ? 'text-orange-400 font-black' : 'text-gray-300'">ENG</button>
-                            <button @click="lang = 'BM'; openLang = false" class="w-full text-left px-3 py-1.5 hover:bg-orange-600 transition" :class="lang === 'BM' ? 'text-orange-400 font-black' : 'text-gray-300'">BM</button>
+                        <div x-show="openLang" @click.away="openLang = false" x-transition class="absolute right-0 mt-4 w-24 bg-[#181d26]/80 border border-white/20 text-white rounded-2xl shadow-[0_20px_45px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.25)] overflow-hidden text-xs font-bold py-1.5 z-50 backdrop-blur-2xl">
+                            <button @click="lang = 'ENG'; openLang = false" class="w-full text-left px-3.5 py-2 hover:bg-white/10 hover:text-orange-400 transition" :class="lang === 'ENG' ? 'text-orange-400 font-black' : 'text-gray-200'">ENG</button>
+                            <button @click="lang = 'BM'; openLang = false" class="w-full text-left px-3.5 py-2 hover:bg-white/10 hover:text-orange-400 transition" :class="lang === 'BM' ? 'text-orange-400 font-black' : 'text-gray-200'">BM</button>
                         </div>
                     </div>
 
@@ -1045,7 +1045,7 @@ $is_faq = ($current_page == 'faq.php' || $current_page == 'faq');
              x-transition:leave-start="opacity-100 scale-100 translate-y-0"
              x-transition:leave-end="opacity-0 scale-95 -translate-y-4"
              @click.away="mobileMenu = false"
-             class="mt-3 w-full bg-[#2a303c]/95 backdrop-blur-2xl border border-white/20 rounded-3xl shadow-2xl p-6 flex flex-col gap-3.5 items-center md:hidden pointer-events-auto">
+             class="mt-4 w-full bg-[#1e2430]/80 backdrop-blur-2xl border border-white/20 rounded-3xl shadow-[0_25px_50px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.2)] p-6 flex flex-col gap-3.5 items-center md:hidden pointer-events-auto">
             
             <a href="index" class="text-sm font-bold uppercase tracking-wider px-4 py-2 rounded-full w-full text-center <?php echo $is_home ? 'bg-orange-600 text-white font-black' : 'text-white hover:text-orange-400'; ?>" x-text="text.nav_home[lang]"></a>
             <a href="index#testimonials" class="text-xs text-gray-300 hover:text-orange-400 font-semibold">↳ <span x-text="text.testi_badge ? text.testi_badge[lang] : 'Testimonials'">Testimonials</span></a>
