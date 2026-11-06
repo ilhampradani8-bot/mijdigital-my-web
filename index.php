@@ -9,7 +9,18 @@ include 'header.php';
 ?>
 
 <section class="relative w-full min-h-[100vh] flex flex-col lg:flex-row items-stretch bg-[#FFFBF5] overflow-hidden" id="home"
-         x-data="{ scrollY: 0 }"
+         x-data="{ 
+             scrollY: 0, 
+             cursorDetected: false,
+             init() {
+                 let reveal = () => { this.cursorDetected = true; };
+                 window.addEventListener('mousemove', reveal, { once: true });
+                 window.addEventListener('pointermove', reveal, { once: true });
+                 window.addEventListener('touchstart', reveal, { once: true });
+                 // Fallback timeout in case device has no cursor pointer
+                 setTimeout(reveal, 2000);
+             }
+         }"
          @scroll.window.passive="scrollY = window.scrollY">
     
     <!-- Hero Image with Smooth Parallax Depth -->
@@ -23,13 +34,14 @@ include 'header.php';
          </div>
     </div>
 
-    <!-- Hero Content with Subtle Counter-Parallax & Instant Visible Typography -->
+    <!-- Hero Content with Cursor Detection & Parallax -->
     <div class="w-full lg:w-7/12 flex flex-col justify-center px-6 sm:px-12 pt-32 sm:pt-40 lg:pt-36 pb-16 lg:pb-20 z-20 order-1 lg:order-2 text-left relative text-gray-900 transition-transform duration-100 ease-out will-change-transform"
          :style="`transform: translateY(${Math.min(scrollY * 0.08, 50)}px)`">
         
-        <div class="mx-auto max-w-3xl w-full flex flex-col justify-center">
+        <div class="mx-auto max-w-3xl w-full flex flex-col justify-center transition-all duration-700 ease-out"
+             :class="cursorDetected ? 'opacity-100 translate-y-0 filter-none' : 'opacity-0 translate-y-6 blur-sm pointer-events-none'">
 
-            <div class="mb-4 flex items-center" data-aos="fade-up"> 
+            <div class="mb-4 flex items-center"> 
                 <p class="text-orange-600 font-display font-bold tracking-[0.25em] uppercase text-[10px] sm:text-xs flex items-center gap-3">
                     <span class="w-8 h-[2px] bg-orange-600 inline-block"></span> 
                     <span x-text="text.hero_badge[lang]">Tentang Saya</span>
@@ -37,22 +49,21 @@ include 'header.php';
             </div>
 
             <h2 class="font-modernica text-xl sm:text-2xl lg:text-3xl font-bold text-gray-500 mb-2 leading-tight tracking-wide flex items-center" 
-                data-aos="fade-up" data-aos-delay="100" 
                 x-text="text.hero_sub[lang]">
                 SAYA MENDAKI. SAYA BERLARI.
             </h2>
             
             <h1 class="font-modernica text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.05] mb-6 tracking-tighter text-gray-900">
-                <span class="block" data-aos="fade-up" data-aos-delay="200" x-text="text.hero_and[lang]">DAN</span>
-                <span class="block text-gray-900" data-aos="fade-up" data-aos-delay="300" x-text="text.hero_build[lang]">SAYA BOLEH BINA</span>
-                <span class="block" data-aos="fade-up" data-aos-delay="400">
+                <span class="block" x-text="text.hero_and[lang]">DAN</span>
+                <span class="block text-gray-900" x-text="text.hero_build[lang]">SAYA BOLEH BINA</span>
+                <span class="block">
                     <span class="text-gray-900" x-text="text.hero_a[lang]">SEBUAH </span>
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-orange-500 to-yellow-500" x-text="text.hero_beautiful[lang]">LAMAN WEB MENARIK</span>
                 </span>
-                <span class="block text-gray-900" data-aos="fade-up" data-aos-delay="500" x-text="text.hero_foryou[lang]">UNTUK ANDA.</span>
+                <span class="block text-gray-900" x-text="text.hero_foryou[lang]">UNTUK ANDA.</span>
             </h1>
 
-            <div class="mb-8 pl-5 border-l-4 border-orange-600 flex items-center pr-4" data-aos="fade-up" data-aos-delay="600">
+            <div class="mb-8 pl-5 border-l-4 border-orange-600 flex items-center pr-4">
                 <p class="text-xs sm:text-sm md:text-base text-gray-600 font-sans font-medium leading-relaxed max-w-xl" x-text="text.hero_desc[lang]">
                     Disiplin aktiviti luar diterapkan dalam kod yang sempurna. Saya membina aset digital berprestasi tinggi khusus untuk anda.
                 </p>
