@@ -20,12 +20,11 @@ $canonicalUrl = $currentDomain . strtok($_SERVER['REQUEST_URI'] ?? '/', '?');
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
     <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large">
     
-    <!-- Bing & Google Webmaster Verification Placeholders -->
-    <meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE_HERE">
-    <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE_HERE">
-
-    <!-- Canonical URL -->
+    <!-- Canonical & Multilingual Alternate Links -->
     <link rel="canonical" href="<?php echo htmlspecialchars($canonicalUrl); ?>">
+    <link rel="alternate" hreflang="ms-MY" href="<?php echo htmlspecialchars($canonicalUrl); ?>">
+    <link rel="alternate" hreflang="en" href="<?php echo htmlspecialchars($canonicalUrl); ?>">
+    <link rel="alternate" hreflang="x-default" href="<?php echo htmlspecialchars($canonicalUrl); ?>">
 
     <!-- Favicon & PWA Webmanifest -->
     <link rel="icon" type="image/png" href="favicon.png">
@@ -39,7 +38,7 @@ $canonicalUrl = $currentDomain . strtok($_SERVER['REQUEST_URI'] ?? '/', '?');
     <meta property="og:site_name" content="MIJ Digital ENT">
     <meta property="og:title" content="<?php echo htmlspecialchars($metaTitle); ?>">
     <meta property="og:description" content="<?php echo htmlspecialchars($metaDescription); ?>">
-    <meta property="og:image" content="<?php echo $currentDomain; ?>/hero.jpg">
+    <meta property="og:image" content="<?php echo $currentDomain; ?>/hero.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:locale" content="ms_MY">
@@ -48,7 +47,7 @@ $canonicalUrl = $currentDomain . strtok($_SERVER['REQUEST_URI'] ?? '/', '?');
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="<?php echo htmlspecialchars($metaTitle); ?>">
     <meta name="twitter:description" content="<?php echo htmlspecialchars($metaDescription); ?>">
-    <meta name="twitter:image" content="<?php echo $currentDomain; ?>/hero.jpg">
+    <meta name="twitter:image" content="<?php echo $currentDomain; ?>/hero.webp">
 
     <!-- Schema.org Structured Data (JSON-LD) for Bing, Google, ChatGPT & Perplexity AI -->
     <script type="application/ld+json">
@@ -60,13 +59,16 @@ $canonicalUrl = $currentDomain . strtok($_SERVER['REQUEST_URI'] ?? '/', '?');
           "@id": "https://mijdigital.my/#organization",
           "name": "MIJ Digital ENT",
           "url": "https://mijdigital.my",
-          "logo": "https://mijdigital.my/mij-logo.png",
-          "image": "https://mijdigital.my/hero.jpg",
+          "logo": "https://mijdigital.my/mij-logo.webp",
+          "image": "https://mijdigital.my/hero.webp",
           "description": "Pakar pembinaan website profesional, personal branding, corporate profile & sistem perniagaan khas di Malaysia.",
           "priceRange": "RM 999 - RM 5000",
           "areaServed": "MY",
           "sameAs": [
-            "https://mijdigital.my"
+            "https://www.instagram.com/ikhwanjamal90?igsh=ejdmb2NvMjh2b2V1",
+            "https://www.threads.com/@ikhwanjamal90?invite=0",
+            "https://www.strava.com/athletes/186812023",
+            "https://tradingsafe.mijdigital.my"
           ]
         },
         {
@@ -898,7 +900,7 @@ $is_faq = ($current_page == 'faq.php' || $current_page == 'faq');
             
             <!-- Logo -->
             <a href="index" class="flex items-center group pointer-events-auto">
-                <img src="mij-logo.png" alt="MIJ Digital" width="200" height="100" class="h-16 md:h-24 w-auto object-contain transition-transform duration-200 group-hover:scale-105 filter drop-shadow-xl">
+                <img src="mij-logo.webp" alt="MIJ Digital" width="200" height="100" class="h-16 md:h-24 w-auto object-contain transition-transform duration-200 group-hover:scale-105 filter drop-shadow-xl">
             </a>
 
             <!-- Mobile Menu Toggle Button -->

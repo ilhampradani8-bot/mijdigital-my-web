@@ -228,7 +228,7 @@
                         <div class="footer-widget">
                             <div class="footer-logo flex items-center mb-6">
                                 <a href="index" class="inline-block">
-                                    <img src="mij-logo.png" class="h-16 md:h-20 w-auto object-contain transition-transform duration-200 hover:scale-105" alt="MIJ Digital Logo">
+                                    <img src="mij-logo.webp" class="h-16 md:h-20 w-auto object-contain transition-transform duration-200 hover:scale-105" alt="MIJ Digital Logo">
                                 </a>
                             </div>
                             <div class="footer-text">
@@ -327,7 +327,7 @@ $data_json_str = file_exists(__DIR__ . '/data.json') ? file_get_contents(__DIR__
     if (document.querySelector('.testimonialSwiper')) {
         var swiperTesti = new Swiper(".testimonialSwiper", {
             slidesPerView: 1, spaceBetween: 30, loop: true,
-            autoplay: { delay: 3500 },
+            autoplay: { delay: 3500, disableOnInteraction: false, pauseOnMouseEnter: true },
             pagination: { el: ".swiper-pagination", clickable: true },
             breakpoints: {
                 768: { slidesPerView: 2, spaceBetween: 30 },
@@ -386,5 +386,31 @@ $data_json_str = file_exists(__DIR__ . '/data.json') ? file_get_contents(__DIR__
         }));
     });
 </script>
+
+<!-- Metallic Floating WhatsApp Bubble (Bottom Left) -->
+<aside aria-label="Floating WhatsApp" class="fixed bottom-6 left-6 z-50 group">
+    <a href="https://wa.me/601155886905" target="_blank" rel="noopener noreferrer"
+       class="relative flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full transition-all duration-300 transform group-hover:scale-110 active:scale-95 border-2 border-white/80 bg-gradient-to-br from-[#f8fafc] via-[#e2e8f0] to-[#cbd5e1]"
+       style="box-shadow: 0 10px 25px rgba(0,0,0,0.3), 5px 5px 12px rgba(160,175,195,0.4), -5px -5px 12px rgba(255,255,255,0.9), inset 2px 2px 3px rgba(255,255,255,0.9), inset -2px -2px 3px rgba(0,0,0,0.15);"
+       title="Hubungi MIJ Digital via WhatsApp">
+        
+        <!-- Metallic Beacon Status Ring -->
+        <span class="absolute -top-1 -right-1 flex h-4 w-4">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-4 w-4 bg-emerald-500 border-2 border-white shadow-sm"></span>
+        </span>
+
+        <!-- WhatsApp Icon inside Metallic Chrome Shield -->
+        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-gradient-to-tr from-[#128C7E] via-[#25D366] to-[#25D366] flex items-center justify-center text-white shadow-md shadow-emerald-600/40">
+            <i class="fab fa-whatsapp text-2xl sm:text-2xl text-white"></i>
+        </div>
+
+        <!-- Tooltip Label on Hover -->
+        <span class="absolute left-full ml-3 px-3.5 py-1.5 bg-[#181d26]/90 backdrop-blur-md text-white text-xs font-bold rounded-xl whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none shadow-xl border border-white/10 hidden sm:block">
+            Chat WhatsApp
+        </span>
+    </a>
+</aside>
+
 </body>
 </html>
