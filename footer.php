@@ -371,7 +371,9 @@ $data_json_str = file_exists(__DIR__ . '/data.json') ? file_get_contents(__DIR__
                 nav_chat: { ENG: 'Chat With Me', BM: 'Sembang WhatsApp' },
                 ft_privacy: { ENG: 'Privacy Policy', BM: 'Dasar Privasi' },
                 ft_terms: { ENG: 'Terms of Service', BM: 'Syarat Perkhidmatan' },
-                ft_cookies: { ENG: 'Cookie Policy', BM: 'Dasar Kuki' }
+                ft_cookies: { ENG: 'Cookie Policy', BM: 'Dasar Kuki' },
+                btn_wa: { ENG: 'WhatsApp Now', BM: 'WhatsApp Sekarang' },
+                btn_contact: { ENG: 'Contact Me', BM: 'Hubungi Saya' }
             }, initialText),
             dynamic: initialData,
 
