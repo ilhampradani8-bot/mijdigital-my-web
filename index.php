@@ -8,54 +8,64 @@ $pageKeywords = 'bina website malaysia, web developer kuala lumpur, personal bra
 include 'header.php'; 
 ?>
 
-<section class="relative w-full min-h-[100vh] flex flex-col lg:flex-row items-stretch bg-[#FFFBF5] overflow-hidden" id="home">
+<section class="relative w-full min-h-[100vh] flex flex-col lg:flex-row items-stretch bg-[#FFFBF5] overflow-hidden" id="home"
+         x-data="{ scrollY: 0 }"
+         @scroll.window.passive="scrollY = window.scrollY">
     
-    <div class="relative w-full lg:w-5/12 order-2 lg:order-1 flex-1 min-h-[40vh] lg:min-h-full z-10">
+    <!-- Hero Image with Smooth Parallax Depth -->
+    <div class="relative w-full lg:w-5/12 order-2 lg:order-1 flex-1 min-h-[40vh] lg:min-h-full z-10 overflow-hidden">
          <div class="hidden lg:block absolute top-20 bottom-20 -right-32 w-64 bg-black/30 blur-[120px] -z-10 pointer-events-none"></div>
          <div class="w-full h-full bg-[#0a0a0a] overflow-hidden group relative z-10 min-h-[300px] lg:min-h-full">
-            <img src="hero.jpg" alt="Profile" class="w-full h-full object-cover object-center transition duration-1000 group-hover:scale-105">
+            <img src="hero.jpg" alt="Profile" 
+                 class="w-full h-[120%] -top-[10%] relative object-cover object-center transition-transform duration-100 ease-out will-change-transform group-hover:scale-105"
+                 :style="`transform: translateY(${Math.min(scrollY * 0.22, 140)}px)`">
             <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent opacity-80 lg:hidden"></div>
          </div>
     </div>
 
-    <div class="w-full lg:w-7/12 flex flex-col justify-center px-6 sm:px-12 pt-32 sm:pt-40 lg:pt-36 pb-16 lg:pb-20 z-20 order-1 lg:order-2 text-left relative text-gray-900">
+    <!-- Hero Content with Subtle Counter-Parallax & Instant Visible Typography -->
+    <div class="w-full lg:w-7/12 flex flex-col justify-center px-6 sm:px-12 pt-32 sm:pt-40 lg:pt-36 pb-16 lg:pb-20 z-20 order-1 lg:order-2 text-left relative text-gray-900 transition-transform duration-100 ease-out will-change-transform"
+         :style="`transform: translateY(${Math.min(scrollY * 0.08, 50)}px)`">
         
         <div class="mx-auto max-w-3xl w-full flex flex-col justify-center">
 
             <div class="mb-4 flex items-center" data-aos="fade-up"> 
                 <p class="text-orange-600 font-display font-bold tracking-[0.25em] uppercase text-[10px] sm:text-xs flex items-center gap-3">
                     <span class="w-8 h-[2px] bg-orange-600 inline-block"></span> 
-                    <span x-text="text.hero_badge[lang]"></span>
+                    <span x-text="text.hero_badge[lang]">Tentang Saya</span>
                 </p>
             </div>
 
             <h2 class="font-modernica text-xl sm:text-2xl lg:text-3xl font-bold text-gray-500 mb-2 leading-tight tracking-wide flex items-center" 
                 data-aos="fade-up" data-aos-delay="100" 
                 x-text="text.hero_sub[lang]">
+                SAYA MENDAKI. SAYA BERLARI.
             </h2>
             
             <h1 class="font-modernica text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.05] mb-6 tracking-tighter text-gray-900">
-                <span class="block" data-aos="fade-up" data-aos-delay="200" x-text="text.hero_and[lang]"></span>
-                <span class="block text-gray-900" data-aos="fade-up" data-aos-delay="300" x-text="text.hero_build[lang]"></span>
+                <span class="block" data-aos="fade-up" data-aos-delay="200" x-text="text.hero_and[lang]">DAN</span>
+                <span class="block text-gray-900" data-aos="fade-up" data-aos-delay="300" x-text="text.hero_build[lang]">SAYA BOLEH BINA</span>
                 <span class="block" data-aos="fade-up" data-aos-delay="400">
-                    <span class="text-gray-900" x-text="text.hero_a[lang]"></span>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-orange-500 to-yellow-500" x-text="text.hero_beautiful[lang]"></span>
+                    <span class="text-gray-900" x-text="text.hero_a[lang]">SEBUAH </span>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-orange-500 to-yellow-500" x-text="text.hero_beautiful[lang]">LAMAN WEB MENARIK</span>
                 </span>
-                <span class="block text-gray-900" data-aos="fade-up" data-aos-delay="500" x-text="text.hero_foryou[lang]"></span>
+                <span class="block text-gray-900" data-aos="fade-up" data-aos-delay="500" x-text="text.hero_foryou[lang]">UNTUK ANDA.</span>
             </h1>
 
             <div class="mb-8 pl-5 border-l-4 border-orange-600 flex items-center pr-4" data-aos="fade-up" data-aos-delay="600">
-                <p class="text-xs sm:text-sm md:text-base text-gray-600 font-sans font-medium leading-relaxed max-w-xl" x-text="text.hero_desc[lang]"></p>
+                <p class="text-xs sm:text-sm md:text-base text-gray-600 font-sans font-medium leading-relaxed max-w-xl" x-text="text.hero_desc[lang]">
+                    Disiplin aktiviti luar diterapkan dalam kod yang sempurna. Saya membina aset digital berprestasi tinggi khusus untuk anda.
+                </p>
             </div>
 
             <div class="flex flex-wrap gap-4 justify-start items-center pb-2">
                 <a href="#pricing" class="px-8 py-4 bg-gradient-to-r from-[#e2e8f0] via-[#f8fafc] to-[#cbd5e1] text-slate-800 font-modernica font-black text-xs tracking-[0.2em] uppercase rounded-full border border-white/90 shadow-[8px_8px_18px_#d9dfd5,-8px_-8px_18px_#ffffff] hover:shadow-[inset_3px_3px_6px_#cbd5e1,inset_-3px_-3px_6px_#ffffff] hover:text-orange-600 transition-all duration-300 flex items-center gap-3 whitespace-nowrap group active:scale-95">
-                    <span x-text="text.btn_start[lang]"></span>
+                    <span x-text="text.btn_start[lang]">Bina Website Anda</span>
                     <svg class="w-4 h-4 text-orange-600 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 </a>
                 
                 <a href="portfolio.php" class="group px-8 py-4 bg-white border-2 border-gray-200 text-black font-modernica font-bold text-xs tracking-[0.2em] uppercase hover:border-black transition rounded-full flex items-center gap-2 whitespace-nowrap hover:shadow-lg">
-                    <span x-text="text.nav_portfolio[lang]"></span>
+                    <span x-text="text.nav_portfolio[lang]">Portfolio</span>
                 </a>
             </div>
 

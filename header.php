@@ -855,6 +855,7 @@ $is_pricing = ($current_page == 'pricing.php' || $current_page == 'pricing');
 $is_faq = ($current_page == 'faq.php' || $current_page == 'faq');
 ?>
     <header x-data="{ 
+                navLoaded: false,
                 isScrolled: false, 
                 navVisible: true, 
                 lastScrollY: 0, 
@@ -865,6 +866,12 @@ $is_faq = ($current_page == 'faq.php' || $current_page == 'faq');
                 isHomePage: <?php echo $is_home ? 'true' : 'false'; ?> 
             }" 
             x-init="
+                let triggerLoad = () => { setTimeout(() => { navLoaded = true; }, 350); };
+                if (document.readyState === 'complete') {
+                    triggerLoad();
+                } else {
+                    window.addEventListener('load', triggerLoad);
+                }
                 window.addEventListener('scroll', () => { 
                     let st = window.scrollY;
                     isScrolled = (st > 20);
@@ -884,20 +891,8 @@ $is_faq = ($current_page == 'faq.php' || $current_page == 'faq');
                     lastScrollY = st;
                 }, { passive: true });
             "
-            :class="navVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'"
-            class="fixed top-0 left-0 right-0 z-50 py-3 px-4 md:px-8 bg-transparent pointer-events-none transition-all duration-300 ease-in-out">
-        
-        <div x-show="text && text.promo_text && text.promo_text[lang] && text.promo_text[lang].trim() !== ''" 
-             class="bg-gray-800/90 text-white h-10 flex items-center overflow-hidden transition-all duration-300 ease-in-out relative z-50 mb-3 rounded-full border border-white/15 pointer-events-auto backdrop-blur-md shadow-lg"
-             :class="isScrolled ? '-mt-12 opacity-0' : 'mt-0 opacity-100'">
-            <div class="w-full overflow-hidden">
-                <div class="whitespace-nowrap animate-marquee text-[10px] md:text-xs font-bold tracking-widest uppercase py-2">
-                    <span x-html="text?.promo_text?.[lang] || ''" class="mr-12"></span>
-                    <span x-html="text?.promo_text?.[lang] || ''" class="mr-12"></span>
-                    <span x-html="text?.promo_text?.[lang] || ''" class="mr-12"></span>
-                </div>
-            </div>
-        </div>
+            :class="(navLoaded && navVisible) ? 'translate-y-0 opacity-100 pointer-events-none' : '-translate-y-full opacity-0 pointer-events-none'"
+            class="fixed top-0 left-0 right-0 z-50 py-3 px-4 md:px-8 bg-transparent transition-all duration-700 ease-out transform -translate-y-full opacity-0">
 
         <div class="max-w-7xl mx-auto flex items-center justify-between pointer-events-none">
             
