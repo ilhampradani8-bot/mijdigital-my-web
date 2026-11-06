@@ -1,5 +1,9 @@
 <?php 
-$pageTitle = 'Price List | MIJ Digital ENT'; 
+// Metadata SEO Khusus Halaman Price List
+$pageTitle = 'Pakej Harga Bina Website & Sistem Murah | MIJ Digital ENT'; 
+$pageDescription = 'Pakej harga telus & berpatutan untuk Personal Branding, Corporate Website, dan Business System. Termasuk Percuma 1 Tahun Domain (.com/.my) dan Cloud Hosting berkelajuan tinggi.';
+$pageKeywords = 'harga bina website malaysia, pakej website murah, kos bina website kuala lumpur, harga web corporate, web design pricing malaysia';
+
 include 'header.php'; 
 ?>
 

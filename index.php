@@ -1,6 +1,9 @@
 <?php 
-// Judul Halaman Spesifik untuk Tab Browser
-$pageTitle = 'MIJ Digital - Professional Web Solutions'; 
+// Metadata SEO Khusus Halaman Utama (Homepage)
+$pageTitle = 'MIJ Digital ENT | Pakar Pembinaan Website Profesional & Sistem Malaysia'; 
+$pageDescription = 'Pakar pembinaan website profesional, personal branding, corporate profile & sistem perniagaan khas di Malaysia. Pakej termasuk 1 Tahun Percuma Domain (.com/.my) & Cloud Hosting.';
+$pageKeywords = 'bina website malaysia, web developer kuala lumpur, personal branding website, corporate website malaysia, sistem perniagaan, web design, mij digital';
+
 // Memanggil bagian atas website (Meta tag, CSS, Menu Navigasi)
 include 'header.php'; 
 ?>

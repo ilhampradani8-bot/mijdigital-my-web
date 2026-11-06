@@ -1,5 +1,9 @@
 <?php 
-$pageTitle = 'FAQ | MIJ Digital ENT'; 
+// Metadata SEO Khusus Halaman FAQ
+$pageTitle = 'Soalan Lazim (FAQ) Web Development & Sistem | MIJ Digital ENT'; 
+$pageDescription = 'Jawapan lengkap kepada soalan lazim mengenai tempoh siap website, kaedah bayaran, sokongan teknikal 1 tahun percuma, dan teknologi pembangunan laman web MIJ Digital.';
+$pageKeywords = 'soalan lazim website, faq web design, tempoh bina website, kos web developer malaysia, waranti website';
+
 include 'header.php'; 
 ?>
 

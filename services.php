@@ -1,5 +1,9 @@
 <?php 
-$pageTitle = 'Services | MIJ Digital ENT'; 
+// Metadata SEO Khusus Halaman Services
+$pageTitle = 'Perkhidmatan Bina Website & Pembangunan Sistem | MIJ Digital ENT'; 
+$pageDescription = 'Servis profesional pembangunan laman web: Personal Branding, Corporate Identity, Business System (CRM, POS, Booking), dan integrasi sistem custom di Malaysia.';
+$pageKeywords = 'servis bina website, perkhidmatan web developer, corporate web design malaysia, pembangunan sistem perniagaan, pos rental sistem kuala lumpur';
+
 include 'header.php'; 
 ?>
 

@@ -84,3 +84,4 @@ jobs:
 ## 🔍 Catatan SEO & Google Indexing
 - Pastikan kode verifikasi Google Search Console diisi pada `<meta name="google-site-verification" content="...">` di `header.php`.
 - Halaman portofolio harus menyajikan data HTML langsung dari server (`data.json`) agar crawler Googlebot tidak membaca halaman sebagai "kosong".
+
