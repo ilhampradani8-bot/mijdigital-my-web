@@ -28,18 +28,19 @@ include 'header.php';
          @scroll.window.passive="scrollY = window.scrollY">
     
     <!-- Hero Image with Smooth Parallax Depth (Optimized High-Res WebP) -->
-    <div class="relative w-full lg:w-5/12 order-2 lg:order-1 flex-1 min-h-[40vh] lg:min-h-full z-10 overflow-hidden">
+    <div class="relative w-full lg:w-5/12 order-2 lg:order-1 flex-1 min-h-[350px] sm:min-h-[420px] lg:min-h-full z-10 overflow-hidden bg-[#FFFBF5]">
          <div class="hidden lg:block absolute top-20 bottom-20 -right-32 w-64 bg-black/30 blur-[120px] -z-10 pointer-events-none"></div>
-         <div class="w-full h-full bg-[#0a0a0a] overflow-hidden group relative z-10 min-h-[300px] lg:min-h-full">
+         <div class="w-full h-full bg-[#FFFBF5] overflow-hidden group relative z-10 min-h-[350px] sm:min-h-[420px] lg:min-h-full">
             <picture>
                 <source srcset="hero.webp" type="image/webp">
                 <img src="hero.jpg" alt="Profile" 
                      width="1800" height="2400"
-                     class="w-full h-[120%] -top-[10%] relative object-cover object-center transition-transform duration-100 ease-out will-change-transform group-hover:scale-105"
-                     :style="`transform: translateY(${Math.min(scrollY * 0.22, 140)}px)`"
+                     class="w-full h-full lg:h-[120%] top-0 lg:-top-[10%] relative object-cover object-top sm:object-center transition-transform duration-100 ease-out will-change-transform group-hover:scale-105"
+                     :style="window.innerWidth >= 1024 ? `transform: translateY(${Math.min(scrollY * 0.22, 140)}px)` : 'transform: none'"
                      fetchpriority="high">
             </picture>
-            <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent opacity-80 lg:hidden"></div>
+            <!-- Bottom subtle gradient to blend smoothly into the next dark section on mobile -->
+            <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#09090b] via-transparent to-transparent opacity-80 lg:hidden"></div>
          </div>
     </div>
 
